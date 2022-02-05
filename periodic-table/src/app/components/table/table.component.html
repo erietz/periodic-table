@@ -1,30 +1,9 @@
 <table>
-  <thead>
-    <tr>
-      <td>
-        Column 1
-      </td>
-      <td>
-        Column 2
-      </td>
-    </tr>
-  </thead>
   <tbody>
-    <tr>
-      <td>
-        Row 1 Col 1
-      </td>
-      <td>
-        Row 1 Col 2
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Row 2 Col 1
-      </td>
-      <td>
-        Row 2 Col 2
-      </td>
+    <tr *ngFor="let row of tableArray">
+      <td>{{row.row1}}</td>
+      <td>{{row.row2}}</td>
+      <td>{{row.row3}}</td>
     </tr>
   </tbody>
 </table>
