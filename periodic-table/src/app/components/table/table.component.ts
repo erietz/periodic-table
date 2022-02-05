@@ -6,23 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-    tableArray = [
+    myTab: {[index: string]:any}[] = [
         {
-            row1: "test1",
-            row2: "test1",
-            row3: "test1",
+            "col1": "default", 
+            "col2": "lkjsdlkjsdflkj", 
+            "col3": "0.02"
         },
         {
-            row1: "test2",
-            row2: "test2",
-            row3: "test2",
+            "col1": "sdfsdf", 
+            "col2": "sddf", 
+            "col3": "23.34"
         },
         {
-            row1: "test3",
-            row2: "test3",
-            row3: "test3",
+            "col1": "lklkj", 
+            "col2": "kj2", 
+            "col3": "0888"
         },
     ]
+
+    // columns = Object.keys(this.table[0]);
+    myCols = ["co1", "col2", "col3"];
 
     constructor() { }
 

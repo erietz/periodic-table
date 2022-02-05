@@ -1,9 +1,5 @@
 <table>
-  <tbody>
-    <tr *ngFor="let row of tableArray">
-      <td>{{row.row1}}</td>
-      <td>{{row.row2}}</td>
-      <td>{{row.row3}}</td>
+    <tr *ngFor="let col of myCols">
+      <td *ngFor="let row of myTab">{{row[col]}}</td>
     </tr>
-  </tbody>
 </table>
