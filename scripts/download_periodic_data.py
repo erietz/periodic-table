@@ -10,6 +10,6 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, data=payload)
 
-with open("./peridicTable.json", "w") as f:
+with open("./raw_atomic_data.json", "w") as f:
   json.dump(response.json(), f, indent=2)
 
