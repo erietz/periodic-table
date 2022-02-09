@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Cell, CellComponent} from '../cell/cell.component';
 
 @Component({
   selector: 'app-table',
@@ -6,31 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-    myTab: {[index: string]:any}[] = [
+    myTab: {[index: string]: Cell}[] = [
         {
-            "col1": "default", 
-            "col2": "lkjsdlkjsdflkj", 
-            "col3": "0.02",
-            "col4": "0.02"
+            "col1": new Cell('C', 'Carbon', 6),
+            "col2": new Cell('H', 'Hydrogen', 1),
+            "col3": new Cell('H', 'Hydrogen', 1),
         },
         {
-            "col1": "sdfsdf", 
-            "col2": "sddf", 
-            "col3": "23.34",
-            "col4": "23.34",
-        },
-        {
-            "col1": "lklkj", 
-            "col2": "kj2", 
-            "col3": "0888",
-            "col4": "23.34",
-        },
-        {
-            "col1": "what", 
-            "col2": "is", 
-            "col3": "happening",
-            "col4": "23.34",
-        },
+            "col1": new Cell('B', 'Boron', 3),
+            "col2": new Cell('T', 'Test', 234),
+            "col3": new Cell('H', 'Hydrogen', 1),
+        }
     ]
 
     myCols = Object.keys(this.myTab[0]);

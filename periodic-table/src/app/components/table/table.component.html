@@ -1,5 +1,7 @@
 <table>
     <tr *ngFor="let row of myTab">
-      <td *ngFor="let col of myCols">{{row[col]}}</td>
+      <td *ngFor="let col of myCols">
+        <app-cell [cell]="row[col]"></app-cell>
+      </td>
     </tr>
 </table>
