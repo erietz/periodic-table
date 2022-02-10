@@ -25,12 +25,12 @@ export class TableComponent implements OnInit {
       let data: {[index: string]: any}[] = [];
 
       for (const row of periodic_data) {
+        let newRow: {[index: string]: any} = {};
         for (const col in row) {
           const { Symbol, Name, AtomicNumber, ...Rest } = row[col];
-          data.push(
-            { col: new Cell(Symbol, Name, parseInt(AtomicNumber), Rest)}
-          );
+            newRow[col] = new Cell(Symbol, Name, AtomicNumber, Rest);
         }
+        data.push(newRow);
       }
 
       return data;

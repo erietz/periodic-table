@@ -2,4 +2,10 @@ table {
     color: #234567;
     border: #444444;
     width: 100%;
+    overflow-x: scroll;
+}
+
+td {
+  // border: 1px solid;
+  // background-color: #ababab;
 }
