@@ -454,6 +454,63 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
 
     },
     "col4": {
+      "AtomicNumber":"22",
+      "Symbol":"Ti",
+      "Name":"Titanium",
+      "AtomicMass":"47.867",
+      "CPKHexColor":"BFC2C7",
+      "ElectronConfiguration":"[Ar]4s2 3d2",
+      "Electronegativity":"1.54",
+      "AtomicRadius":"187",
+      "IonizationEnergy":"6.828",
+      "ElectronAffinity":"0.079",
+      "OxidationStates":"+4, +3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1941",
+      "BoilingPoint":"3560",
+      "Density":"4.5",
+      "GroupBlock":"Transition metal",
+      "YearDiscovered":"1791"
+    },
+    "col5": {
+      "AtomicNumber":"23",
+      "Symbol":"V",
+      "Name":"Vanadium",
+      "AtomicMass":"50.9415",
+      "CPKHexColor":"A6A6AB",
+      "ElectronConfiguration":"[Ar]4s2 3d3",
+      "Electronegativity":"1.63",
+      "AtomicRadius":"179",
+      "IonizationEnergy":"6.746",
+      "ElectronAffinity":"0.525",
+      "OxidationStates":"+5, +4, +3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"2183",
+      "BoilingPoint":"3680",
+      "Density":"6.0",
+      "GroupBlock":"Transition metal",
+      "YearDiscovered":"1801"
+    },
+    "col6": {
+      "AtomicNumber":"24",
+      "Symbol":"Cr",
+      "Name":"Chromium",
+      "AtomicMass":"51.996",
+      "CPKHexColor":"8A99C7",
+      "ElectronConfiguration":"[Ar]3d5 4s1",
+      "Electronegativity":"1.66",
+      "AtomicRadius":"189",
+      "IonizationEnergy":"6.767",
+      "ElectronAffinity":"0.666",
+      "OxidationStates":"+6, +3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"2180",
+      "BoilingPoint":"2944",
+      "Density":"7.15",
+      "GroupBlock":"Transition metal",
+      "YearDiscovered":"1797"
+    },
+    "col7": {
       "AtomicNumber":"25",
       "Symbol":"Mn",
       "Name":"Manganese",
@@ -471,29 +528,27 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"7.3",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1774"
-
     },
-    "col5": {
-    "AtomicNumber":"26",
-    "Symbol":"Fe",
-    "Name":"Iron",
-    "AtomicMass":"55.84",
-    "CPKHexColor":"E06633",
-    "ElectronConfiguration":"[Ar]4s2 3d6",
-    "Electronegativity":"1.83",
-    "AtomicRadius":"194",
-    "IonizationEnergy":"7.902",
-    "ElectronAffinity":"0.163",
-    "OxidationStates":"+3, +2",
-    "StandardState":"Solid",
-    "MeltingPoint":"1811",
-    "BoilingPoint":"3134",
-    "Density":"7.874",
-    "GroupBlock":"Transition metal",
-    "YearDiscovered":"Ancient"
-
+    "col8": {
+      "AtomicNumber":"26",
+      "Symbol":"Fe",
+      "Name":"Iron",
+      "AtomicMass":"55.84",
+      "CPKHexColor":"E06633",
+      "ElectronConfiguration":"[Ar]4s2 3d6",
+      "Electronegativity":"1.83",
+      "AtomicRadius":"194",
+      "IonizationEnergy":"7.902",
+      "ElectronAffinity":"0.163",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1811",
+      "BoilingPoint":"3134",
+      "Density":"7.874",
+      "GroupBlock":"Transition metal",
+      "YearDiscovered":"Ancient"
     },
-    "col6": {
+    "col9": {
       "AtomicNumber":"27",
       "Symbol":"Co",
       "Name":"Cobalt",
@@ -511,9 +566,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"8.86",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1735"
-
     },
-    "col7": {
+    "col10": {
       "AtomicNumber":"28",
       "Symbol":"Ni",
       "Name":"Nickel",
@@ -531,9 +585,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"8.912",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1751"
-
     },
-    "col8": {
+    "col11": {
       "AtomicNumber":"29",
       "Symbol":"Cu",
       "Name":"Copper",
@@ -552,7 +605,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col9": {
+    "col12": {
       "AtomicNumber":"30",
       "Symbol":"Zn",
       "Name":"Zinc",
@@ -571,7 +624,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1746"
     },
-    "col10": {
+    "col13": {
       "AtomicNumber":"31",
       "Symbol":"Ga",
       "Name":"Gallium",
@@ -590,7 +643,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"1875"
     },
-    "col11": {
+    "col14": {
       "AtomicNumber":"32",
       "Symbol":"Ge",
       "Name":"Germanium",
@@ -609,7 +662,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Metalloid",
       "YearDiscovered":"1886"
     },
-    "col12": {
+    "col15": {
       "AtomicNumber":"33",
       "Symbol":"As",
       "Name":"Arsenic",
@@ -628,7 +681,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Metalloid",
       "YearDiscovered":"Ancient"
     },
-    "col13": {
+    "col16": {
       "AtomicNumber":"34",
       "Symbol":"Se",
       "Name":"Selenium",
@@ -647,7 +700,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Nonmetal",
       "YearDiscovered":"1817"
     },
-    "col14": {
+    "col17": {
       "AtomicNumber":"35",
       "Symbol":"Br",
       "Name":"Bromine",
@@ -666,7 +719,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Halogen",
       "YearDiscovered":"1826"
     },
-    "col15": {
+    "col18": {
       "AtomicNumber":"36",
       "Symbol":"Kr",
       "Name":"Krypton",
@@ -684,8 +737,10 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"0.003733",
       "GroupBlock":"Noble gas",
       "YearDiscovered":"1898"
-    },
-    "col16": {
+    }
+  },
+  {
+    "col1": {
       "AtomicNumber":"37",
       "Symbol":"Rb",
       "Name":"Rubidium",
@@ -704,7 +759,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkali metal",
       "YearDiscovered":"1861"
     },
-    "col17": {
+    "col2": {
       "AtomicNumber":"38",
       "Symbol":"Sr",
       "Name":"Strontium",
@@ -723,7 +778,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkaline earth metal",
       "YearDiscovered":"1790"
     },
-    "col18": {
+    "col3": {
       "AtomicNumber":"39",
       "Symbol":"Y",
       "Name":"Yttrium",
@@ -741,10 +796,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"4.47",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1794"
-    }
-  },
-  {
-    "col1": {
+    },
+    "col4": {
       "AtomicNumber":"40",
       "Symbol":"Zr",
       "Name":"Zirconium",
@@ -763,7 +816,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1789"
     },
-    "col2": {
+    "col5": {
       "AtomicNumber":"41",
       "Symbol":"Nb",
       "Name":"Niobium",
@@ -782,7 +835,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1801"
     },
-    "col3": {
+    "col6": {
       "AtomicNumber":"42",
       "Symbol":"Mo",
       "Name":"Molybdenum",
@@ -801,7 +854,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1778"
     },
-    "col4": {
+    "col7": {
       "AtomicNumber":"43",
       "Symbol":"Tc",
       "Name":"Technetium",
@@ -820,7 +873,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1937"
     },
-    "col5": {
+    "col8": {
       "AtomicNumber":"44",
       "Symbol":"Ru",
       "Name":"Ruthenium",
@@ -839,7 +892,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1827"
     },
-    "col6": {
+    "col9": {
       "AtomicNumber":"45",
       "Symbol":"Rh",
       "Name":"Rhodium",
@@ -858,7 +911,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1803"
     },
-    "col7": {
+    "col10": {
       "AtomicNumber":"46",
       "Symbol":"Pd",
       "Name":"Palladium",
@@ -877,7 +930,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1803"
     },
-    "col8": {
+    "col11": {
       "AtomicNumber":"47",
       "Symbol":"Ag",
       "Name":"Silver",
@@ -896,7 +949,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col9": {
+    "col12": {
       "AtomicNumber":"48",
       "Symbol":"Cd",
       "Name":"Cadmium",
@@ -915,7 +968,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1817"
     },
-    "col10": {
+    "col13": {
       "AtomicNumber":"49",
       "Symbol":"In",
       "Name":"Indium",
@@ -934,7 +987,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"1863"
     },
-    "col11": {
+    "col14": {
       "AtomicNumber":"50",
       "Symbol":"Sn",
       "Name":"Tin",
@@ -953,7 +1006,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col12": {
+    "col15": {
       "AtomicNumber":"51",
       "Symbol":"Sb",
       "Name":"Antimony",
@@ -972,7 +1025,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Metalloid",
       "YearDiscovered":"Ancient"
     },
-    "col13": {
+    "col16": {
       "AtomicNumber":"52",
       "Symbol":"Te",
       "Name":"Tellurium",
@@ -991,7 +1044,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Metalloid",
       "YearDiscovered":"1782"
     },
-    "col14": {
+    "col17": {
       "AtomicNumber":"53",
       "Symbol":"I",
       "Name":"Iodine",
@@ -1010,7 +1063,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Halogen",
       "YearDiscovered":"1811"
     },
-    "col15": {
+    "col18": {
       "AtomicNumber":"54",
       "Symbol":"Xe",
       "Name":"Xenon",
@@ -1028,8 +1081,10 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"0.005887",
       "GroupBlock":"Noble gas",
       "YearDiscovered":"1898"
-    },
-    "col16": {
+    }
+  },
+  {
+    "col1": {
       "AtomicNumber":"55",
       "Symbol":"Cs",
       "Name":"Cesium",
@@ -1048,7 +1103,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkali metal",
       "YearDiscovered":"1860"
     },
-    "col17": {
+    "col2": {
       "AtomicNumber":"56",
       "Symbol":"Ba",
       "Name":"Barium",
@@ -1067,294 +1122,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkaline earth metal",
       "YearDiscovered":"1808"
     },
-    "col18": {
-      "AtomicNumber":"57",
-      "Symbol":"La",
-      "Name":"Lanthanum",
-      "AtomicMass":"138.9055",
-      "CPKHexColor":"70D4FF",
-      "ElectronConfiguration":"[Xe]6s2 5d1",
-      "Electronegativity":"1.1",
-      "AtomicRadius":"240",
-      "IonizationEnergy":"5.577",
-      "ElectronAffinity":"0.5",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1191",
-      "BoilingPoint":"3737",
-      "Density":"6.15",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1839"
-    }
-  },
-  {
-    "col1": {
-      "AtomicNumber":"58",
-      "Symbol":"Ce",
-      "Name":"Cerium",
-      "AtomicMass":"140.116",
-      "CPKHexColor":"FFFFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f1 5d1",
-      "Electronegativity":"1.12",
-      "AtomicRadius":"235",
-      "IonizationEnergy":"5.539",
-      "ElectronAffinity":"0.5",
-      "OxidationStates":"+4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1071",
-      "BoilingPoint":"3697",
-      "Density":"6.770",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1803"
-    },
-    "col2": {
-      "AtomicNumber":"59",
-      "Symbol":"Pr",
-      "Name":"Praseodymium",
-      "AtomicMass":"140.90766",
-      "CPKHexColor":"D9FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f3",
-      "Electronegativity":"1.13",
-      "AtomicRadius":"239",
-      "IonizationEnergy":"5.464",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1204",
-      "BoilingPoint":"3793",
-      "Density":"6.77",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1885"
-    },
-    "col3": {
-      "AtomicNumber":"60",
-      "Symbol":"Nd",
-      "Name":"Neodymium",
-      "AtomicMass":"144.24",
-      "CPKHexColor":"C7FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f4",
-      "Electronegativity":"1.14",
-      "AtomicRadius":"229",
-      "IonizationEnergy":"5.525",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1294",
-      "BoilingPoint":"3347",
-      "Density":"7.01",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1885"
-    },
+    "col3": {},
     "col4": {
-      "AtomicNumber":"61",
-      "Symbol":"Pm",
-      "Name":"Promethium",
-      "AtomicMass":"144.91276",
-      "CPKHexColor":"A3FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f5",
-      "Electronegativity":"",
-      "AtomicRadius":"236",
-      "IonizationEnergy":"5.55",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1315",
-      "BoilingPoint":"3273",
-      "Density":"7.26",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1945"
-    },
-    "col5": {
-      "AtomicNumber":"62",
-      "Symbol":"Sm",
-      "Name":"Samarium",
-      "AtomicMass":"150.4",
-      "CPKHexColor":"8FFFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f6",
-      "Electronegativity":"1.17",
-      "AtomicRadius":"229",
-      "IonizationEnergy":"5.644",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3, +2",
-      "StandardState":"Solid",
-      "MeltingPoint":"1347",
-      "BoilingPoint":"2067",
-      "Density":"7.52",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1879"
-    },
-    "col6": {
-      "AtomicNumber":"63",
-      "Symbol":"Eu",
-      "Name":"Europium",
-      "AtomicMass":"151.964",
-      "CPKHexColor":"61FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f7",
-      "Electronegativity":"",
-      "AtomicRadius":"233",
-      "IonizationEnergy":"5.670",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3, +2",
-      "StandardState":"Solid",
-      "MeltingPoint":"1095",
-      "BoilingPoint":"1802",
-      "Density":"5.24",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1901"
-    },
-    "col7": {
-      "AtomicNumber":"64",
-      "Symbol":"Gd",
-      "Name":"Gadolinium",
-      "AtomicMass":"157.2",
-      "CPKHexColor":"45FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f7 5d1",
-      "Electronegativity":"1.2",
-      "AtomicRadius":"237",
-      "IonizationEnergy":"6.150",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1586",
-      "BoilingPoint":"3546",
-      "Density":"7.90",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1880"
-    },
-    "col8": {
-      "AtomicNumber":"65",
-      "Symbol":"Tb",
-      "Name":"Terbium",
-      "AtomicMass":"158.92535",
-      "CPKHexColor":"30FFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f9",
-      "Electronegativity":"",
-      "AtomicRadius":"221",
-      "IonizationEnergy":"5.864",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1629",
-      "BoilingPoint":"3503",
-      "Density":"8.23",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1843"
-    },
-    "col9": {
-      "AtomicNumber":"66",
-      "Symbol":"Dy",
-      "Name":"Dysprosium",
-      "AtomicMass":"162.500",
-      "CPKHexColor":"1FFFC7",
-      "ElectronConfiguration":"[Xe]6s2 4f10",
-      "Electronegativity":"1.22",
-      "AtomicRadius":"229",
-      "IonizationEnergy":"5.939",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1685",
-      "BoilingPoint":"2840",
-      "Density":"8.55",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1886"
-    },
-    "col10": {
-      "AtomicNumber":"67",
-      "Symbol":"Ho",
-      "Name":"Holmium",
-      "AtomicMass":"164.93033",
-      "CPKHexColor":"00FF9C",
-      "ElectronConfiguration":"[Xe]6s2 4f11",
-      "Electronegativity":"1.23",
-      "AtomicRadius":"216",
-      "IonizationEnergy":"6.022",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1747",
-      "BoilingPoint":"2973",
-      "Density":"8.80",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1878"
-    },
-    "col11": {
-      "AtomicNumber":"68",
-      "Symbol":"Er",
-      "Name":"Erbium",
-      "AtomicMass":"167.26",
-      "CPKHexColor":"",
-      "ElectronConfiguration":"[Xe]6s2 4f12",
-      "Electronegativity":"1.24",
-      "AtomicRadius":"235",
-      "IonizationEnergy":"6.108",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1802",
-      "BoilingPoint":"3141",
-      "Density":"9.07",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1843"
-    },
-    "col12": {
-      "AtomicNumber":"69",
-      "Symbol":"Tm",
-      "Name":"Thulium",
-      "AtomicMass":"168.93422",
-      "CPKHexColor":"00D452",
-      "ElectronConfiguration":"[Xe]6s2 4f13",
-      "Electronegativity":"1.25",
-      "AtomicRadius":"227",
-      "IonizationEnergy":"6.184",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1818",
-      "BoilingPoint":"2223",
-      "Density":"9.32",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1879"
-    },
-    "col13": {
-      "AtomicNumber":"70",
-      "Symbol":"Yb",
-      "Name":"Ytterbium",
-      "AtomicMass":"173.05",
-      "CPKHexColor":"00BF38",
-      "ElectronConfiguration":"[Xe]6s2 4f14",
-      "Electronegativity":"",
-      "AtomicRadius":"242",
-      "IonizationEnergy":"6.254",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3, +2",
-      "StandardState":"Solid",
-      "MeltingPoint":"1092",
-      "BoilingPoint":"1469",
-      "Density":"6.90",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1878"
-    },
-    "col14": {
-      "AtomicNumber":"71",
-      "Symbol":"Lu",
-      "Name":"Lutetium",
-      "AtomicMass":"174.9668",
-      "CPKHexColor":"00AB24",
-      "ElectronConfiguration":"[Xe]6s2 4f14 5d1",
-      "Electronegativity":"1.27",
-      "AtomicRadius":"221",
-      "IonizationEnergy":"5.426",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1936",
-      "BoilingPoint":"3675",
-      "Density":"9.84",
-      "GroupBlock":"Lanthanide",
-      "YearDiscovered":"1907"
-    },
-    "col15": {
       "AtomicNumber":"72",
       "Symbol":"Hf",
       "Name":"Hafnium",
@@ -1373,7 +1142,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1923"
     },
-    "col16": {
+    "col5": {
       "AtomicNumber":"73",
       "Symbol":"Ta",
       "Name":"Tantalum",
@@ -1392,7 +1161,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1802"
     },
-    "col17": {
+    "col6": {
       "AtomicNumber":"74",
       "Symbol":"W",
       "Name":"Tungsten",
@@ -1411,7 +1180,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1783"
     },
-    "col18": {
+    "col7": {
       "AtomicNumber":"75",
       "Symbol":"Re",
       "Name":"Rhenium",
@@ -1429,10 +1198,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"20.8",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1925"
-    }
-  },
-  {
-    "col1": {
+    },
+    "col8": {
       "AtomicNumber":"76",
       "Symbol":"Os",
       "Name":"Osmium",
@@ -1451,7 +1218,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1803"
     },
-    "col2": {
+    "col9": {
       "AtomicNumber":"77",
       "Symbol":"Ir",
       "Name":"Iridium",
@@ -1470,7 +1237,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1803"
     },
-    "col3": {
+    "col10": {
       "AtomicNumber":"78",
       "Symbol":"Pt",
       "Name":"Platinum",
@@ -1489,7 +1256,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1735"
     },
-    "col4": {
+    "col11": {
       "AtomicNumber":"79",
       "Symbol":"Au",
       "Name":"Gold",
@@ -1508,7 +1275,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col5": {
+    "col12": {
       "AtomicNumber":"80",
       "Symbol":"Hg",
       "Name":"Mercury",
@@ -1527,7 +1294,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col6": {
+    "col13": {
       "AtomicNumber":"81",
       "Symbol":"Tl",
       "Name":"Thallium",
@@ -1546,7 +1313,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"1861"
     },
-    "col7": {
+    "col14": {
       "AtomicNumber":"82",
       "Symbol":"Pb",
       "Name":"Lead",
@@ -1565,7 +1332,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"Ancient"
     },
-    "col8": {
+    "col15": {
       "AtomicNumber":"83",
       "Symbol":"Bi",
       "Name":"Bismuth",
@@ -1584,7 +1351,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"1753"
     },
-    "col9": {
+    "col16": {
       "AtomicNumber":"84",
       "Symbol":"Po",
       "Name":"Polonium",
@@ -1603,7 +1370,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Metalloid",
       "YearDiscovered":"1898"
     },
-    "col10": {
+    "col17": {
       "AtomicNumber":"85",
       "Symbol":"At",
       "Name":"Astatine",
@@ -1622,7 +1389,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Halogen",
       "YearDiscovered":"1940"
     },
-    "col11": {
+    "col18": {
       "AtomicNumber":"86",
       "Symbol":"Rn",
       "Name":"Radon",
@@ -1640,8 +1407,10 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"0.00973",
       "GroupBlock":"Noble gas",
       "YearDiscovered":"1900"
-    },
-    "col12": {
+    }
+  },
+  {
+    "col1": {
       "AtomicNumber":"87",
       "Symbol":"Fr",
       "Name":"Francium",
@@ -1660,7 +1429,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkali metal",
       "YearDiscovered":"1939"
     },
-    "col13": {
+    "col2": {
       "AtomicNumber":"88",
       "Symbol":"Ra",
       "Name":"Radium",
@@ -1679,294 +1448,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkaline earth metal",
       "YearDiscovered":"1898"
     },
-    "col14": {
-      "AtomicNumber":"89",
-      "Symbol":"Ac",
-      "Name":"Actinium",
-      "AtomicMass":"227.02775",
-      "CPKHexColor":"70ABFA",
-      "ElectronConfiguration":"[Rn]7s2 6d1",
-      "Electronegativity":"1.1",
-      "AtomicRadius":"260",
-      "IonizationEnergy":"5.17",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1324",
-      "BoilingPoint":"3471",
-      "Density":"10.07",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1899"
-    },
-    "col15": {
-      "AtomicNumber":"90",
-      "Symbol":"Th",
-      "Name":"Thorium",
-      "AtomicMass":"232.038",
-      "CPKHexColor":"00BAFF",
-      "ElectronConfiguration":"[Rn]7s2 6d2",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"237",
-      "IonizationEnergy":"6.08",
-      "ElectronAffinity":"",
-      "OxidationStates":"+4",
-      "StandardState":"Solid",
-      "MeltingPoint":"2023",
-      "BoilingPoint":"5061",
-      "Density":"11.72",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1828"
-    },
-    "col16": {
-      "AtomicNumber":"91",
-      "Symbol":"Pa",
-      "Name":"Protactinium",
-      "AtomicMass":"231.03588",
-      "CPKHexColor":"00A1FF",
-      "ElectronConfiguration":"[Rn]7s2 5f2 6d1",
-      "Electronegativity":"1.5",
-      "AtomicRadius":"243",
-      "IonizationEnergy":"5.89",
-      "ElectronAffinity":"",
-      "OxidationStates":"+5, +4",
-      "StandardState":"Solid",
-      "MeltingPoint":"1845",
-      "BoilingPoint":"",
-      "Density":"15.37",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1913"
-    },
-    "col17": {
-      "AtomicNumber":"92",
-      "Symbol":"U",
-      "Name":"Uranium",
-      "AtomicMass":"238.0289",
-      "CPKHexColor":"008FFF",
-      "ElectronConfiguration":"[Rn]7s2 5f3 6d1",
-      "Electronegativity":"1.38",
-      "AtomicRadius":"240",
-      "IonizationEnergy":"6.194",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +5, +4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1408",
-      "BoilingPoint":"4404",
-      "Density":"18.95",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1789"
-    },
-    "col18": {
-      "AtomicNumber":"93",
-      "Symbol":"Np",
-      "Name":"Neptunium",
-      "AtomicMass":"237.048172",
-      "CPKHexColor":"0080FF",
-      "ElectronConfiguration":"[Rn]7s2 5f4 6d1",
-      "Electronegativity":"1.36",
-      "AtomicRadius":"221",
-      "IonizationEnergy":"6.266",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +5, +4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"917",
-      "BoilingPoint":"4175",
-      "Density":"20.25",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1940"
-    }
-  },
-  {
-    "col1": {
-      "AtomicNumber":"94",
-      "Symbol":"Pu",
-      "Name":"Plutonium",
-      "AtomicMass":"244.06420",
-      "CPKHexColor":"006BFF",
-      "ElectronConfiguration":"[Rn]7s2 5f6",
-      "Electronegativity":"1.28",
-      "AtomicRadius":"243",
-      "IonizationEnergy":"6.06",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +5, +4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"913",
-      "BoilingPoint":"3501",
-      "Density":"19.84",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1940"
-    },
-    "col2": {
-      "AtomicNumber":"95",
-      "Symbol":"Am",
-      "Name":"Americium",
-      "AtomicMass":"243.061380",
-      "CPKHexColor":"545CF2",
-      "ElectronConfiguration":"[Rn]7s2 5f7",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"244",
-      "IonizationEnergy":"5.993",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +5, +4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1449",
-      "BoilingPoint":"2284",
-      "Density":"13.69",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1944"
-    },
-    "col3": {
-      "AtomicNumber":"96",
-      "Symbol":"Cm",
-      "Name":"Curium",
-      "AtomicMass":"247.07035",
-      "CPKHexColor":"785CE3",
-      "ElectronConfiguration":"[Rn]7s2 5f7 6d1",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"245",
-      "IonizationEnergy":"6.02",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1618",
-      "BoilingPoint":"3400",
-      "Density":"13.51",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1944"
-    },
+    "col3": {},
     "col4": {
-      "AtomicNumber":"97",
-      "Symbol":"Bk",
-      "Name":"Berkelium",
-      "AtomicMass":"247.07031",
-      "CPKHexColor":"8A4FE3",
-      "ElectronConfiguration":"[Rn]7s2 5f9",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"244",
-      "IonizationEnergy":"6.23",
-      "ElectronAffinity":"",
-      "OxidationStates":"+4, +3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1323",
-      "BoilingPoint":"",
-      "Density":"14",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1949"
-    },
-    "col5": {
-      "AtomicNumber":"98",
-      "Symbol":"Cf",
-      "Name":"Californium",
-      "AtomicMass":"251.07959",
-      "CPKHexColor":"A136D4",
-      "ElectronConfiguration":"[Rn]7s2 5f10",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"245",
-      "IonizationEnergy":"6.30",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1173",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1950"
-    },
-    "col6": {
-      "AtomicNumber":"99",
-      "Symbol":"Es",
-      "Name":"Einsteinium",
-      "AtomicMass":"252.0830",
-      "CPKHexColor":"B31FD4",
-      "ElectronConfiguration":"[Rn]7s2 5f11",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"245",
-      "IonizationEnergy":"6.42",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1133",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1952"
-    },
-    "col7": {
-      "AtomicNumber":"100",
-      "Symbol":"Fm",
-      "Name":"Fermium",
-      "AtomicMass":"257.09511",
-      "CPKHexColor":"B31FBA",
-      "ElectronConfiguration":"[Rn] 5f12 7s2",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"",
-      "IonizationEnergy":"6.50",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1800",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1952"
-    },
-    "col8": {
-      "AtomicNumber":"101",
-      "Symbol":"Md",
-      "Name":"Mendelevium",
-      "AtomicMass":"258.09843",
-      "CPKHexColor":"B30DA6",
-      "ElectronConfiguration":"[Rn]7s2 5f13",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"",
-      "IonizationEnergy":"6.58",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3, +2",
-      "StandardState":"Solid",
-      "MeltingPoint":"1100",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1955"
-    },
-    "col9": {
-      "AtomicNumber":"102",
-      "Symbol":"No",
-      "Name":"Nobelium",
-      "AtomicMass":"259.10100",
-      "CPKHexColor":"BD0D87",
-      "ElectronConfiguration":"[Rn]7s2 5f14",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"",
-      "IonizationEnergy":"6.65",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3, +2",
-      "StandardState":"Solid",
-      "MeltingPoint":"1100",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1957"
-    },
-    "col10": {
-      "AtomicNumber":"103",
-      "Symbol":"Lr",
-      "Name":"Lawrencium",
-      "AtomicMass":"266.120",
-      "CPKHexColor":"C70066",
-      "ElectronConfiguration":"[Rn]7s2 5f14 6d1",
-      "Electronegativity":"1.3",
-      "AtomicRadius":"",
-      "IonizationEnergy":"",
-      "ElectronAffinity":"",
-      "OxidationStates":"+3",
-      "StandardState":"Solid",
-      "MeltingPoint":"1900",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Actinide",
-      "YearDiscovered":"1961"
-    },
-    "col11": {
       "AtomicNumber":"104",
       "Symbol":"Rf",
       "Name":"Rutherfordium",
@@ -1985,7 +1468,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1964"
     },
-    "col12": {
+    "col5": {
       "AtomicNumber":"105",
       "Symbol":"Db",
       "Name":"Dubnium",
@@ -2004,7 +1487,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1967"
     },
-    "col13": {
+    "col6": {
       "AtomicNumber":"106",
       "Symbol":"Sg",
       "Name":"Seaborgium",
@@ -2023,7 +1506,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1974"
     },
-    "col14": {
+    "col7": {
       "AtomicNumber":"107",
       "Symbol":"Bh",
       "Name":"Bohrium",
@@ -2042,7 +1525,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1976"
     },
-    "col15": {
+    "col8": {
       "AtomicNumber":"108",
       "Symbol":"Hs",
       "Name":"Hassium",
@@ -2061,7 +1544,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1984"
     },
-    "col16": {
+    "col9": {
       "AtomicNumber":"109",
       "Symbol":"Mt",
       "Name":"Meitnerium",
@@ -2080,7 +1563,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1982"
     },
-    "col17": {
+    "col10": {
       "AtomicNumber":"110",
       "Symbol":"Ds",
       "Name":"Darmstadtium",
@@ -2099,7 +1582,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1994"
     },
-    "col18": {
+    "col11": {
       "AtomicNumber":"111",
       "Symbol":"Rg",
       "Name":"Roentgenium",
@@ -2117,10 +1600,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"",
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1994"
-    }
-  },
-  {
-    "col1": {
+    },
+    "col12": {
       "AtomicNumber":"112",
       "Symbol":"Cn",
       "Name":"Copernicium",
@@ -2139,7 +1620,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Transition metal",
       "YearDiscovered":"1996"
     },
-    "col2": {
+    "col13": {
       "AtomicNumber":"113",
       "Symbol":"Nh",
       "Name":"Nihonium",
@@ -2158,7 +1639,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"2004"
     },
-    "col3": {
+    "col14": {
       "AtomicNumber":"114",
       "Symbol":"Fl",
       "Name":"Flerovium",
@@ -2177,7 +1658,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"1998"
     },
-    "col4": {
+    "col15": {
       "AtomicNumber":"115",
       "Symbol":"Mc",
       "Name":"Moscovium",
@@ -2196,7 +1677,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"2003"
     },
-    "col5": {
+    "col16": {
       "AtomicNumber":"116",
       "Symbol":"Lv",
       "Name":"Livermorium",
@@ -2215,7 +1696,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Post-transition metal",
       "YearDiscovered":"2000"
     },
-    "col6": {
+    "col17": {
       "AtomicNumber":"117",
       "Symbol":"Ts",
       "Name":"Tennessine",
@@ -2234,7 +1715,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Halogen",
       "YearDiscovered":"2010"
     },
-    "col7": {
+    "col18": {
       "AtomicNumber":"118",
       "Symbol":"Og",
       "Name":"Oganesson",
@@ -2252,109 +1733,586 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "Density":"",
       "GroupBlock":"Noble gas",
       "YearDiscovered":"2006"
-    },
-    "col8": {
-      "AtomicNumber":"118",
-      "Symbol":"Og",
-      "Name":"Oganesson",
-      "AtomicMass":"295.216",
-      "CPKHexColor":"",
-      "ElectronConfiguration":"[Rn]7s2 7p6 5f14 6d10 (predicted)",
-      "Electronegativity":"",
-      "AtomicRadius":"",
-      "IonizationEnergy":"",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +4, +2, +1, 0, -1",
-      "StandardState":"Expected to be a Gas",
-      "MeltingPoint":"",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Noble gas",
-      "YearDiscovered":"2006"
-    },
-    "col9": {
-      "AtomicNumber":"118",
-      "Symbol":"Og",
-      "Name":"Oganesson",
-      "AtomicMass":"295.216",
-      "CPKHexColor":"",
-      "ElectronConfiguration":"[Rn]7s2 7p6 5f14 6d10 (predicted)",
-      "Electronegativity":"",
-      "AtomicRadius":"",
-      "IonizationEnergy":"",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +4, +2, +1, 0, -1",
-      "StandardState":"Expected to be a Gas",
-      "MeltingPoint":"",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Noble gas",
-      "YearDiscovered":"2006"
-    },
-    "col10": {
-      "AtomicNumber":"118",
-      "Symbol":"Og",
-      "Name":"Oganesson",
-      "AtomicMass":"295.216",
-      "CPKHexColor":"",
-      "ElectronConfiguration":"[Rn]7s2 7p6 5f14 6d10 (predicted)",
-      "Electronegativity":"",
-      "AtomicRadius":"",
-      "IonizationEnergy":"",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +4, +2, +1, 0, -1",
-      "StandardState":"Expected to be a Gas",
-      "MeltingPoint":"",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Noble gas",
-      "YearDiscovered":"2006"
-    },
-    "col11": {
-      "AtomicNumber":"118",
-      "Symbol":"Og",
-      "Name":"Oganesson",
-      "AtomicMass":"295.216",
-      "CPKHexColor":"",
-      "ElectronConfiguration":"[Rn]7s2 7p6 5f14 6d10 (predicted)",
-      "Electronegativity":"",
-      "AtomicRadius":"",
-      "IonizationEnergy":"",
-      "ElectronAffinity":"",
-      "OxidationStates":"+6, +4, +2, +1, 0, -1",
-      "StandardState":"Expected to be a Gas",
-      "MeltingPoint":"",
-      "BoilingPoint":"",
-      "Density":"",
-      "GroupBlock":"Noble gas",
-      "YearDiscovered":"2006"
-    },
-    "col12": {},
-    "col13": {},
-    "col14": {},
-    "col15": {},
-    "col16": {},
-    "col17": {},
-    "col18": {}
+    }
   },
   {
     "col1": {},
     "col2": {},
     "col3": {},
-    "col4": {},
-    "col5": {},
-    "col6": {},
-    "col7": {},
-    "col8": {},
-    "col9": {},
-    "col10": {},
-    "col11": {},
-    "col12": {},
-    "col13": {},
-    "col14": {},
-    "col15": {},
-    "col16": {},
-    "col17": {},
-    "col18": {}
+    "col4": {
+      "AtomicNumber":"57",
+      "Symbol":"La",
+      "Name":"Lanthanum",
+      "AtomicMass":"138.9055",
+      "CPKHexColor":"70D4FF",
+      "ElectronConfiguration":"[Xe]6s2 5d1",
+      "Electronegativity":"1.1",
+      "AtomicRadius":"240",
+      "IonizationEnergy":"5.577",
+      "ElectronAffinity":"0.5",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1191",
+      "BoilingPoint":"3737",
+      "Density":"6.15",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1839"
+    },
+    "col5": {
+      "AtomicNumber":"58",
+      "Symbol":"Ce",
+      "Name":"Cerium",
+      "AtomicMass":"140.116",
+      "CPKHexColor":"FFFFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f1 5d1",
+      "Electronegativity":"1.12",
+      "AtomicRadius":"235",
+      "IonizationEnergy":"5.539",
+      "ElectronAffinity":"0.5",
+      "OxidationStates":"+4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1071",
+      "BoilingPoint":"3697",
+      "Density":"6.770",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1803"
+    },
+    "col6": {
+      "AtomicNumber":"59",
+      "Symbol":"Pr",
+      "Name":"Praseodymium",
+      "AtomicMass":"140.90766",
+      "CPKHexColor":"D9FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f3",
+      "Electronegativity":"1.13",
+      "AtomicRadius":"239",
+      "IonizationEnergy":"5.464",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1204",
+      "BoilingPoint":"3793",
+      "Density":"6.77",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1885"
+    },
+    "col7": {
+      "AtomicNumber":"60",
+      "Symbol":"Nd",
+      "Name":"Neodymium",
+      "AtomicMass":"144.24",
+      "CPKHexColor":"C7FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f4",
+      "Electronegativity":"1.14",
+      "AtomicRadius":"229",
+      "IonizationEnergy":"5.525",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1294",
+      "BoilingPoint":"3347",
+      "Density":"7.01",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1885"
+    },
+    "col8": {
+      "AtomicNumber":"61",
+      "Symbol":"Pm",
+      "Name":"Promethium",
+      "AtomicMass":"144.91276",
+      "CPKHexColor":"A3FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f5",
+      "Electronegativity":"",
+      "AtomicRadius":"236",
+      "IonizationEnergy":"5.55",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1315",
+      "BoilingPoint":"3273",
+      "Density":"7.26",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1945"
+    },
+    "col9": {
+      "AtomicNumber":"62",
+      "Symbol":"Sm",
+      "Name":"Samarium",
+      "AtomicMass":"150.4",
+      "CPKHexColor":"8FFFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f6",
+      "Electronegativity":"1.17",
+      "AtomicRadius":"229",
+      "IonizationEnergy":"5.644",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1347",
+      "BoilingPoint":"2067",
+      "Density":"7.52",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1879"
+    },
+    "col10": {
+      "AtomicNumber":"63",
+      "Symbol":"Eu",
+      "Name":"Europium",
+      "AtomicMass":"151.964",
+      "CPKHexColor":"61FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f7",
+      "Electronegativity":"",
+      "AtomicRadius":"233",
+      "IonizationEnergy":"5.670",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1095",
+      "BoilingPoint":"1802",
+      "Density":"5.24",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1901"
+    },
+    "col11": {
+      "AtomicNumber":"64",
+      "Symbol":"Gd",
+      "Name":"Gadolinium",
+      "AtomicMass":"157.2",
+      "CPKHexColor":"45FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f7 5d1",
+      "Electronegativity":"1.2",
+      "AtomicRadius":"237",
+      "IonizationEnergy":"6.150",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1586",
+      "BoilingPoint":"3546",
+      "Density":"7.90",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1880"
+    },
+    "col12": {
+      "AtomicNumber":"65",
+      "Symbol":"Tb",
+      "Name":"Terbium",
+      "AtomicMass":"158.92535",
+      "CPKHexColor":"30FFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f9",
+      "Electronegativity":"",
+      "AtomicRadius":"221",
+      "IonizationEnergy":"5.864",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1629",
+      "BoilingPoint":"3503",
+      "Density":"8.23",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1843"
+    },
+    "col13": {
+      "AtomicNumber":"66",
+      "Symbol":"Dy",
+      "Name":"Dysprosium",
+      "AtomicMass":"162.500",
+      "CPKHexColor":"1FFFC7",
+      "ElectronConfiguration":"[Xe]6s2 4f10",
+      "Electronegativity":"1.22",
+      "AtomicRadius":"229",
+      "IonizationEnergy":"5.939",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1685",
+      "BoilingPoint":"2840",
+      "Density":"8.55",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1886"
+    },
+    "col14": {
+      "AtomicNumber":"67",
+      "Symbol":"Ho",
+      "Name":"Holmium",
+      "AtomicMass":"164.93033",
+      "CPKHexColor":"00FF9C",
+      "ElectronConfiguration":"[Xe]6s2 4f11",
+      "Electronegativity":"1.23",
+      "AtomicRadius":"216",
+      "IonizationEnergy":"6.022",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1747",
+      "BoilingPoint":"2973",
+      "Density":"8.80",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1878"
+    },
+    "col15": {
+      "AtomicNumber":"68",
+      "Symbol":"Er",
+      "Name":"Erbium",
+      "AtomicMass":"167.26",
+      "CPKHexColor":"",
+      "ElectronConfiguration":"[Xe]6s2 4f12",
+      "Electronegativity":"1.24",
+      "AtomicRadius":"235",
+      "IonizationEnergy":"6.108",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1802",
+      "BoilingPoint":"3141",
+      "Density":"9.07",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1843"
+    },
+    "col16": {
+      "AtomicNumber":"69",
+      "Symbol":"Tm",
+      "Name":"Thulium",
+      "AtomicMass":"168.93422",
+      "CPKHexColor":"00D452",
+      "ElectronConfiguration":"[Xe]6s2 4f13",
+      "Electronegativity":"1.25",
+      "AtomicRadius":"227",
+      "IonizationEnergy":"6.184",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1818",
+      "BoilingPoint":"2223",
+      "Density":"9.32",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1879"
+    },
+    "col17": {
+      "AtomicNumber":"70",
+      "Symbol":"Yb",
+      "Name":"Ytterbium",
+      "AtomicMass":"173.05",
+      "CPKHexColor":"00BF38",
+      "ElectronConfiguration":"[Xe]6s2 4f14",
+      "Electronegativity":"",
+      "AtomicRadius":"242",
+      "IonizationEnergy":"6.254",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1092",
+      "BoilingPoint":"1469",
+      "Density":"6.90",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1878"
+    },
+    "col18": {
+      "AtomicNumber":"71",
+      "Symbol":"Lu",
+      "Name":"Lutetium",
+      "AtomicMass":"174.9668",
+      "CPKHexColor":"00AB24",
+      "ElectronConfiguration":"[Xe]6s2 4f14 5d1",
+      "Electronegativity":"1.27",
+      "AtomicRadius":"221",
+      "IonizationEnergy":"5.426",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1936",
+      "BoilingPoint":"3675",
+      "Density":"9.84",
+      "GroupBlock":"Lanthanide",
+      "YearDiscovered":"1907"
+    }
+  },
+  {
+    "col1": {},
+    "col2": {},
+    "col3": {},
+    "col4": {
+      "AtomicNumber":"89",
+      "Symbol":"Ac",
+      "Name":"Actinium",
+      "AtomicMass":"227.02775",
+      "CPKHexColor":"70ABFA",
+      "ElectronConfiguration":"[Rn]7s2 6d1",
+      "Electronegativity":"1.1",
+      "AtomicRadius":"260",
+      "IonizationEnergy":"5.17",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1324",
+      "BoilingPoint":"3471",
+      "Density":"10.07",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1899"
+    },
+    "col5": {
+      "AtomicNumber":"90",
+      "Symbol":"Th",
+      "Name":"Thorium",
+      "AtomicMass":"232.038",
+      "CPKHexColor":"00BAFF",
+      "ElectronConfiguration":"[Rn]7s2 6d2",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"237",
+      "IonizationEnergy":"6.08",
+      "ElectronAffinity":"",
+      "OxidationStates":"+4",
+      "StandardState":"Solid",
+      "MeltingPoint":"2023",
+      "BoilingPoint":"5061",
+      "Density":"11.72",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1828"
+    },
+    "col6": {
+      "AtomicNumber":"91",
+      "Symbol":"Pa",
+      "Name":"Protactinium",
+      "AtomicMass":"231.03588",
+      "CPKHexColor":"00A1FF",
+      "ElectronConfiguration":"[Rn]7s2 5f2 6d1",
+      "Electronegativity":"1.5",
+      "AtomicRadius":"243",
+      "IonizationEnergy":"5.89",
+      "ElectronAffinity":"",
+      "OxidationStates":"+5, +4",
+      "StandardState":"Solid",
+      "MeltingPoint":"1845",
+      "BoilingPoint":"",
+      "Density":"15.37",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1913"
+    },
+    "col7": {
+      "AtomicNumber":"92",
+      "Symbol":"U",
+      "Name":"Uranium",
+      "AtomicMass":"238.0289",
+      "CPKHexColor":"008FFF",
+      "ElectronConfiguration":"[Rn]7s2 5f3 6d1",
+      "Electronegativity":"1.38",
+      "AtomicRadius":"240",
+      "IonizationEnergy":"6.194",
+      "ElectronAffinity":"",
+      "OxidationStates":"+6, +5, +4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1408",
+      "BoilingPoint":"4404",
+      "Density":"18.95",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1789"
+    },
+    "col8": {
+      "AtomicNumber":"93",
+      "Symbol":"Np",
+      "Name":"Neptunium",
+      "AtomicMass":"237.048172",
+      "CPKHexColor":"0080FF",
+      "ElectronConfiguration":"[Rn]7s2 5f4 6d1",
+      "Electronegativity":"1.36",
+      "AtomicRadius":"221",
+      "IonizationEnergy":"6.266",
+      "ElectronAffinity":"",
+      "OxidationStates":"+6, +5, +4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"917",
+      "BoilingPoint":"4175",
+      "Density":"20.25",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1940"
+    },
+    "col9": {
+      "AtomicNumber":"94",
+      "Symbol":"Pu",
+      "Name":"Plutonium",
+      "AtomicMass":"244.06420",
+      "CPKHexColor":"006BFF",
+      "ElectronConfiguration":"[Rn]7s2 5f6",
+      "Electronegativity":"1.28",
+      "AtomicRadius":"243",
+      "IonizationEnergy":"6.06",
+      "ElectronAffinity":"",
+      "OxidationStates":"+6, +5, +4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"913",
+      "BoilingPoint":"3501",
+      "Density":"19.84",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1940"
+    },
+    "col10": {
+      "AtomicNumber":"95",
+      "Symbol":"Am",
+      "Name":"Americium",
+      "AtomicMass":"243.061380",
+      "CPKHexColor":"545CF2",
+      "ElectronConfiguration":"[Rn]7s2 5f7",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"244",
+      "IonizationEnergy":"5.993",
+      "ElectronAffinity":"",
+      "OxidationStates":"+6, +5, +4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1449",
+      "BoilingPoint":"2284",
+      "Density":"13.69",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1944"
+    },
+    "col11": {
+      "AtomicNumber":"96",
+      "Symbol":"Cm",
+      "Name":"Curium",
+      "AtomicMass":"247.07035",
+      "CPKHexColor":"785CE3",
+      "ElectronConfiguration":"[Rn]7s2 5f7 6d1",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"245",
+      "IonizationEnergy":"6.02",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1618",
+      "BoilingPoint":"3400",
+      "Density":"13.51",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1944"
+    },
+    "col12": {
+      "AtomicNumber":"97",
+      "Symbol":"Bk",
+      "Name":"Berkelium",
+      "AtomicMass":"247.07031",
+      "CPKHexColor":"8A4FE3",
+      "ElectronConfiguration":"[Rn]7s2 5f9",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"244",
+      "IonizationEnergy":"6.23",
+      "ElectronAffinity":"",
+      "OxidationStates":"+4, +3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1323",
+      "BoilingPoint":"",
+      "Density":"14",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1949"
+    },
+    "col13": {
+      "AtomicNumber":"98",
+      "Symbol":"Cf",
+      "Name":"Californium",
+      "AtomicMass":"251.07959",
+      "CPKHexColor":"A136D4",
+      "ElectronConfiguration":"[Rn]7s2 5f10",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"245",
+      "IonizationEnergy":"6.30",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1173",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1950"
+    },
+    "col14": {
+      "AtomicNumber":"99",
+      "Symbol":"Es",
+      "Name":"Einsteinium",
+      "AtomicMass":"252.0830",
+      "CPKHexColor":"B31FD4",
+      "ElectronConfiguration":"[Rn]7s2 5f11",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"245",
+      "IonizationEnergy":"6.42",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1133",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1952"
+    },
+    "col15": {
+      "AtomicNumber":"100",
+      "Symbol":"Fm",
+      "Name":"Fermium",
+      "AtomicMass":"257.09511",
+      "CPKHexColor":"B31FBA",
+      "ElectronConfiguration":"[Rn] 5f12 7s2",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"",
+      "IonizationEnergy":"6.50",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1800",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1952"
+    },
+    "col16": {
+      "AtomicNumber":"101",
+      "Symbol":"Md",
+      "Name":"Mendelevium",
+      "AtomicMass":"258.09843",
+      "CPKHexColor":"B30DA6",
+      "ElectronConfiguration":"[Rn]7s2 5f13",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"",
+      "IonizationEnergy":"6.58",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1100",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1955"
+    },
+    "col17": {
+      "AtomicNumber":"102",
+      "Symbol":"No",
+      "Name":"Nobelium",
+      "AtomicMass":"259.10100",
+      "CPKHexColor":"BD0D87",
+      "ElectronConfiguration":"[Rn]7s2 5f14",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"",
+      "IonizationEnergy":"6.65",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3, +2",
+      "StandardState":"Solid",
+      "MeltingPoint":"1100",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1957"
+    },
+    "col18": {
+      "AtomicNumber":"103",
+      "Symbol":"Lr",
+      "Name":"Lawrencium",
+      "AtomicMass":"266.120",
+      "CPKHexColor":"C70066",
+      "ElectronConfiguration":"[Rn]7s2 5f14 6d1",
+      "Electronegativity":"1.3",
+      "AtomicRadius":"",
+      "IonizationEnergy":"",
+      "ElectronAffinity":"",
+      "OxidationStates":"+3",
+      "StandardState":"Solid",
+      "MeltingPoint":"1900",
+      "BoilingPoint":"",
+      "Density":"",
+      "GroupBlock":"Actinide",
+      "YearDiscovered":"1961"
+    }
   }
 ]

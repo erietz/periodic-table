@@ -1,17 +1,21 @@
+:host {
+  margin: 0;
+  padding: 0;
+}
+
 .cell {
   // all: unset;
   text-align: center;
   border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #ababab;
-  // box-sizing: inherit;
-  // display: block;
-  height: 60px;
-  width: 60px;
-  margin: 8px 8px 8px 8px;
-  // text-overflow: ellipsis;
-  max-width: 100%;
+  background-color: var(--color-complementary);
+  min-height: 10px;
+  min-width: 10px;
+  max-width: 80px;
+  max-height: 80px;
+  margin: 0px;
+  padding: 3px;
   overflow: hidden;
+  text-overflow: clip;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
@@ -20,3 +24,8 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
+
+// app-cell {
+//   margin: 0px;
+//   padding: 0px;
+// }
