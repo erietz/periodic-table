@@ -26,10 +26,10 @@ export class TableComponent implements OnInit {
 
       for (const row of periodic_data) {
         for (const col in row) {
-          const symbol = String(col["Name"]);
-          const atomName = String(col["Name"]);
-          const number = parseInt(col["AtomicNumber"]);
-          data.push({col: new Cell(symbol, atomName, number)});
+          const { Symbol, Name, AtomicNumber, ...Rest } = row[col];
+          data.push(
+            { col: new Cell(Symbol, Name, parseInt(AtomicNumber), Rest)}
+          );
         }
       }
 
