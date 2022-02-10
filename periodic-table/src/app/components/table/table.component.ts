@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Cell, CellComponent} from '../cell/cell.component';
+import { periodic_data } from 'src/assets/periodic_grid';
 
 @Component({
   selector: 'app-table',
@@ -7,25 +8,32 @@ import {Cell, CellComponent} from '../cell/cell.component';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-    myTab: {[index: string]: Cell}[] = [
-        {
-            "col1": new Cell('C', 'Carbon', 6),
-            "col2": new Cell('H', 'Hydrogen', 1),
-            "col3": new Cell('H', 'Hydrogen', 1),
-        },
-        {
-            "col1": new Cell('B', 'Boron', 3),
-            "col2": new Cell('T', 'Test', 234),
-            "col3": new Cell('H', 'Hydrogen', 1),
-        }
-    ]
+    public myTab: {[index: string]: any}[];
 
-    myCols = Object.keys(this.myTab[0]);
+    public myCols: string[];
     // myCols = ["co1", "col2", "col3"];
 
-    constructor() { }
+    constructor() {
+      this.myTab = this.loadData();
+      this.myCols = Object.keys(this.myTab[0]);
+    }
 
     ngOnInit(): void {
+    }
+
+    loadData(): {[index: string]: any}[] {
+      let data: {[index: string]: any}[] = [];
+
+      for (const row of periodic_data) {
+        for (const col in row) {
+          const symbol = String(col["Name"]);
+          const atomName = String(col["Name"]);
+          const number = parseInt(col["AtomicNumber"]);
+          data.push({col: new Cell(symbol, atomName, number)});
+        }
+      }
+
+      return data;
     }
 
 }
