@@ -1122,7 +1122,9 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkaline earth metal",
       "YearDiscovered":"1808"
     },
-    "col3": {},
+    "col3": {
+      "AtomicNumber": "*",
+    },
     "col4": {
       "AtomicNumber":"72",
       "Symbol":"Hf",
@@ -1448,7 +1450,9 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "GroupBlock":"Alkaline earth metal",
       "YearDiscovered":"1898"
     },
-    "col3": {},
+    "col3": {
+      "AtomicNumber": "**"
+    },
     "col4": {
       "AtomicNumber":"104",
       "Symbol":"Rf",
@@ -1738,7 +1742,9 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
   {
     "col1": {},
     "col2": {},
-    "col3": {},
+    "col3": {
+      "AtomicNumber": "*"
+    },
     "col4": {
       "AtomicNumber":"57",
       "Symbol":"La",
@@ -2028,7 +2034,9 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
   {
     "col1": {},
     "col2": {},
-    "col3": {},
+    "col3": {
+      "AtomicNumber": "**"
+    },
     "col4": {
       "AtomicNumber":"89",
       "Symbol":"Ac",
