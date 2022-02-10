@@ -1,5 +1,22 @@
 .cell {
+  // all: unset;
   text-align: center;
-  // border: 1px solid;
+  border-radius: 4px;
+  border: 1px solid #eee;
   background-color: #ababab;
+  // box-sizing: inherit;
+  // display: block;
+  height: 60px;
+  width: 60px;
+  margin: 8px 8px 8px 8px;
+  // text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.cell:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }

@@ -12,9 +12,9 @@ export class Cell {
     elementNumber: string,
     elementProperties: {[index: string]: string},
   ) {
-    this.elementSymbol = elementSymbol || "";
-    this.elementName = elementName || "";
-    this.elementNumber = elementNumber || "";
+    this.elementSymbol = elementSymbol;
+    this.elementName = elementName;
+    this.elementNumber = elementNumber;
     this.elementProperties = elementProperties;
   }
 }
