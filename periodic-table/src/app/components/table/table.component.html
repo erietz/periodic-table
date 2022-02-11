@@ -1,12 +1,23 @@
 <table>
+
+  <caption>
+    <div style="width: 30%; text-align: left">
+      Color palette
+      <ul *ngFor="let group of groups">
+          <li [style.background]="palette[group]">
+            {{group}}
+          </li>
+      </ul>
+    </div>
+  </caption>
+
     <tr *ngFor="let row of myTab">
       <td *ngFor="let col of myCols">
         <app-cell
           [cell]="row[col]"
-          [foo]="palette[row[col].elementProperties.GroupBlock]"
+          [backgroundColor]="palette[row[col].elementProperties.GroupBlock]"
           >
         </app-cell>
-        <!-- {{palette[row[col].elementProperties.GroupBlock]}} -->
       </td>
     </tr>
 </table>

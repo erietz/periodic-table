@@ -26,10 +26,10 @@ export class Cell {
 })
 export class CellComponent {
   @Input() cell: Cell;
-  @Input() foo: string;
+  @Input() backgroundColor: string;
 
   constructor() {
     this.cell = new Cell('elementSymbol', 'elementName', "elementNumber", {});
-    this.foo = "#3e3e3e";
+    this.backgroundColor = "#3e3e3e";
   }
 }

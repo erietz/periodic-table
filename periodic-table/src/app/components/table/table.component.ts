@@ -34,7 +34,7 @@ export class TableComponent implements OnInit {
 
           newRow[col] = new Cell(d['Symbol'], d['Name'], d['AtomicNumber'], d);
 
-          if (!groups.has(d['GroupBlock'])) {
+          if (d['GroupBlock'] != null && !groups.has(d['GroupBlock'])) {
             groups.add(d['GroupBlock']);
           }
 
