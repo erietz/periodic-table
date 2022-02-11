@@ -1,7 +1,12 @@
 <table>
     <tr *ngFor="let row of myTab">
       <td *ngFor="let col of myCols">
-        <app-cell [cell]="row[col]"></app-cell>
+        <app-cell
+          [cell]="row[col]"
+          [foo]="palette[row[col].elementProperties.GroupBlock]"
+          >
+        </app-cell>
+        <!-- {{palette[row[col].elementProperties.GroupBlock]}} -->
       </td>
     </tr>
 </table>

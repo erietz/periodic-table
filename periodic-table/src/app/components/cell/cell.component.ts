@@ -26,8 +26,10 @@ export class Cell {
 })
 export class CellComponent {
   @Input() cell: Cell;
+  @Input() foo: string;
 
   constructor() {
     this.cell = new Cell('elementSymbol', 'elementName', "elementNumber", {});
+    this.foo = "#3e3e3e";
   }
 }
