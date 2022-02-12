@@ -9,6 +9,10 @@
           </li>
       </ul>
     </div>
+    <app-cell-properties
+      [properties]="myTab[0]['col1'].elementProperties"
+      >
+    </app-cell-properties>
   </caption>
 
     <tr *ngFor="let row of myTab">

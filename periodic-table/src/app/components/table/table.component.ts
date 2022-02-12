@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Cell, CellComponent} from '../cell/cell.component';
+import { Cell } from '../cell/cell.component';
 import { periodic_data } from 'src/assets/periodic_grid';
 import { COLOR_PALETTE } from 'src/assets/color_palette';
 
