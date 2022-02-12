@@ -13,11 +13,13 @@ export class TableComponent implements OnInit {
     public myCols: string[];
     public groups: string[];
     public palette: {[index: string]: string};
+    public properties: {[index: string]: string};
 
     constructor() {
       [this.myTab, this.groups] = this.loadData();
       this.myCols = Object.keys(this.myTab[0]);
       this.palette = this.generateColorPalette();
+      this.properties = this.myTab[0][this.myCols[0]].elementProperties;
     }
 
     ngOnInit(): void {
@@ -46,6 +48,10 @@ export class TableComponent implements OnInit {
       return [data, Array.from(groups)];
     }
 
+    populateProperties(cell: any): void {
+      this.properties = cell.elementProperties;
+    }
+
     generateColorPalette(): {[index: string]: string} {
       const tmpPalette: {[index: string]: string} = {};
 
@@ -59,4 +65,5 @@ export class TableComponent implements OnInit {
 
       return tmpPalette;
     }
+
 }

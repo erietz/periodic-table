@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class Cell {
   public elementSymbol: string;
@@ -27,9 +27,15 @@ export class Cell {
 export class CellComponent {
   @Input() cell: Cell;
   @Input() backgroundColor: string;
+  @Output() displayProperties: EventEmitter<Cell> = new EventEmitter<Cell>();
 
   constructor() {
     this.cell = new Cell('elementSymbol', 'elementName', "elementNumber", {});
     this.backgroundColor = "#3e3e3e";
+  }
+
+  onHover() {
+    this.displayProperties.emit(this.cell);
+    console.log(this.cell);
   }
 }
