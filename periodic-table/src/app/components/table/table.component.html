@@ -1,14 +1,5 @@
 <table>
-
-  <caption>
-    <div style="width: 25%; margin: auto">
-      Color palette
-      <ul *ngFor="let group of groups">
-          <li [style.background]="palette[group]" [style.color]="'black'">
-            {{group}}
-          </li>
-      </ul>
-    </div>
+  <caption align="left">
     <app-cell-properties
       [properties]="myTab[0]['col1'].elementProperties"
       >
@@ -25,3 +16,8 @@
       </td>
     </tr>
 </table>
+<app-legend
+    [groups]="groups"
+    [palette]="palette"
+  >
+</app-legend>
