@@ -1124,6 +1124,7 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
     },
     "col3": {
       "AtomicNumber": "*",
+      "GroupBlock":"Lanthanide",
     },
     "col4": {
       "AtomicNumber":"72",
@@ -1451,7 +1452,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
       "YearDiscovered":"1898"
     },
     "col3": {
-      "AtomicNumber": "**"
+      "AtomicNumber": "**",
+      "GroupBlock":"Actinide",
     },
     "col4": {
       "AtomicNumber":"104",
@@ -1763,7 +1765,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
     "col1": {},
     "col2": {},
     "col3": {
-      "AtomicNumber": "*"
+      "AtomicNumber": "*",
+      "GroupBlock":"Lanthanide",
     },
     "col4": {
       "AtomicNumber":"57",
@@ -2055,7 +2058,8 @@ export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
     "col1": {},
     "col2": {},
     "col3": {
-      "AtomicNumber": "**"
+      "AtomicNumber": "**",
+      "GroupBlock":"Actinide",
     },
     "col4": {
       "AtomicNumber":"89",
