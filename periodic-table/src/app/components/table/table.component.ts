@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Cell, CellComponent} from '../cell/cell.component';
 import { periodic_data } from 'src/assets/periodic_grid';
+import { COLOR_PALETTE } from 'src/assets/color_palette';
 
 @Component({
   selector: 'app-table',
@@ -46,13 +47,12 @@ export class TableComponent implements OnInit {
     }
 
     generateColorPalette(): {[index: string]: string} {
-      const colors = [ '#006F00', '#0099BD', '#719872', '#70BDDF', '#9A7599', '#98BEDE', '#BDBB72', '#BCE0FF', '#DFBC72', '#DFDFFF', '#FFDE99', '#007173', '#00BDDF', '#719899', '#9B1300', ]
       const tmpPalette: {[index: string]: string} = {};
 
-      for (let i=0; i<colors.length; i++) {
+      for (let i=0; i<COLOR_PALETTE.length; i++) {
         if (this.groups[i] != null) {
-          tmpPalette[this.groups[i]] = colors[i];
-          console.log(this.groups[i], colors[i]);
+          tmpPalette[this.groups[i]] = COLOR_PALETTE[i];
+          console.log(this.groups[i], COLOR_PALETTE[i]);
           console.log(tmpPalette[this.groups[i]]);
         }
       }
