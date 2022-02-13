@@ -20,37 +20,6 @@ p {
   margin: 0;
 }
 
-.spacer {
-  flex: 1;
-}
-
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: var(--color-primary);
-  color: white;
-  font-weight: 600;
-}
-
-.toolbar #left {
-  margin-left: 16px;
-}
-
-.toolbar #right {
-  margin-right: 16px;
-}
-
-
-.toolbar #left:hover,
-.toolbar #right:hover {
-  opacity: 0.8;
-}
-
 .content {
   margin: 82px auto 82px auto;
   padding: 0;
@@ -67,11 +36,3 @@ select {
   padding: 5px;
 }
 
-footer {
-  margin-top: 30px;
-  line-height: 20px;
-}
-
-footer a {
-  color: var(--color-complementary);
-}
