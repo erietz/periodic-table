@@ -1,82 +1,77 @@
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: white;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .spacer {
-    flex: 1;
+  flex: 1;
 }
 
 .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: var(--color-primary);
-    color: white;
-    font-weight: 600;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
 }
 
 .toolbar #left {
-    margin-left: 16px;
+  margin-left: 16px;
 }
 
 .toolbar #right {
-    margin-right: 16px;
+  margin-right: 16px;
 }
 
 
 .toolbar #left:hover,
 .toolbar #right:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .content {
-    margin: 82px auto 82px auto;
-    padding: 0;
-    // max-width: 90%;
-    text-align: center;
+  margin: 82px auto 82px auto;
+  padding: 0;
+  // max-width: 90%;
+  text-align: center;
 }
 
-
-a,
-a:visited,
-a:hover {
-    color: #1976d2;
-    text-decoration: none;
+a, a:visited, a:hover {
+  text-decoration: none;
 }
 
-a:hover {
-    color: #125699;
+select {
+  margin: 10px;
+  padding: 5px;
 }
 
 footer {
-    margin-top: 8px;
-    line-height: 20px;
+  margin-top: 30px;
+  line-height: 20px;
 }
 
 footer a {
-    display: flex;
-    align-items: center;
+  color: var(--color-complementary);
 }
-

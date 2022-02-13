@@ -3,6 +3,7 @@
   [style.background]="backgroundColor"
   *ngIf="cell.elementNumber"
   (mouseover)="onHover()"
+  (click)="openDialog()"
   >
   <b>{{cell.elementSymbol}}</b>
   <p> {{cell.elementName}} </p>

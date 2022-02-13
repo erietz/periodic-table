@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
 
 export class Cell {
   public elementSymbol: string;
@@ -29,7 +31,7 @@ export class CellComponent {
   @Input() backgroundColor: string;
   @Output() displayProperties: EventEmitter<Cell> = new EventEmitter<Cell>();
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
     this.cell = new Cell('elementSymbol', 'elementName', "elementNumber", {});
     this.backgroundColor = "#3e3e3e";
   }
@@ -38,4 +40,14 @@ export class CellComponent {
     this.displayProperties.emit(this.cell);
     console.log(this.cell);
   }
+
+  openDialog() {
+    this.dialog.open(PopupComponent, {
+      data: {
+        tmpData: "This popup will display data for an element obtained from" +
+        " a teammates microservice"
+      }
+    });
+  }
+
 }
