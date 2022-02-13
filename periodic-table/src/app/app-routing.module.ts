@@ -4,7 +4,8 @@ import { CreateTableComponent } from './pages/create-table/create-table.componen
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'create', component: CreateTableComponent }
 ];
 
