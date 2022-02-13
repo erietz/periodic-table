@@ -1,10 +1,16 @@
-* {
-  color: white;
-}
-
 .content {
   margin: 82px auto 82px auto;
   padding: 0;
   // max-width: 90%;
   text-align: center;
+}
+
+input {
+  // padding: 10px;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid white;
 }
