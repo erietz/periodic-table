@@ -38,7 +38,6 @@ export class CellComponent {
 
   onHover() {
     this.displayProperties.emit(this.cell);
-    console.log(this.cell);
   }
 
   openDialog() {

@@ -11,6 +11,7 @@ import { LegendComponent } from './components/legend/legend.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupComponent } from './components/popup/popup.component';
 import { CreateTableComponent } from './pages/create-table/create-table.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreateTableComponent } from './pages/create-table/create-table.componen
     CellPropertiesComponent,
     LegendComponent,
     PopupComponent,
-    CreateTableComponent
+    CreateTableComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
