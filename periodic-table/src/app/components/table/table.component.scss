@@ -1,14 +1,15 @@
 .container {
   display: flex;
+  // align-items: center;
 }
 
 #left {
-  flex-basis: 100px;
+  flex-basis: 15%;
   margin: 5px;
 }
 
 #right {
-  flex-basis: 600px;
+  flex-basis: 85%;
   margin: 5px;
 }
 
