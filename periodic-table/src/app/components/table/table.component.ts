@@ -30,12 +30,17 @@ export class TableComponent implements OnInit {
       let groups = new Set<string>();
 
       for (const row of periodic_data) {
-        let newRow: {[index: string]: any} = {};
+        let newRow: {[index: string]: Cell} = {};
         for (const col in row) {
 
           const d = row[col];
 
-          newRow[col] = new Cell(d['Symbol'], d['Name'], d['AtomicNumber'], d);
+          newRow[col] = {
+            'elementSymbol': d['Symbol'],
+            'elementName': d['Name'],
+            'elementNumber': d['AtomicNumber'],
+            'elementProperties': d
+          }
 
           if (d['GroupBlock'] != null && !groups.has(d['GroupBlock'])) {
             groups.add(d['GroupBlock']);

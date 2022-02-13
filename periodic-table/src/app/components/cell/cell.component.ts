@@ -2,23 +2,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
 
-export class Cell {
-  public elementSymbol: string;
-  public elementName: string;
-  public elementNumber: string;
-  public elementProperties: {[index: string]: string};
-
-  constructor(
-    elementSymbol: string,
-    elementName: string,
-    elementNumber: string,
-    elementProperties: {[index: string]: string},
-  ) {
-    this.elementSymbol = elementSymbol;
-    this.elementName = elementName;
-    this.elementNumber = elementNumber;
-    this.elementProperties = elementProperties;
-  }
+export interface Cell {
+  elementSymbol: string;
+  elementName: string;
+  elementNumber: string;
+  elementProperties: {[index: string]: string};
 }
 
 @Component({
@@ -32,7 +20,12 @@ export class CellComponent {
   @Output() displayProperties: EventEmitter<Cell> = new EventEmitter<Cell>();
 
   constructor(private dialog: MatDialog) {
-    this.cell = new Cell('elementSymbol', 'elementName', "elementNumber", {});
+    this.cell = {
+      'elementSymbol': 'elementSymbol',
+      'elementName': 'elementName',
+      "elementNumber": "elementNumber",
+      "elementProperties": {}
+    };
     this.backgroundColor = "#3e3e3e";
   }
 
