@@ -5,8 +5,8 @@
   </div>
   <div id="right">
     <table>
-      <tr *ngFor="let row of myTab">
-        <td *ngFor="let col of myCols">
+      <tr *ngFor="let row of table">
+        <td *ngFor="let col of columns">
           <app-cell
             [cell]="row[col]"
             [backgroundColor]="palette[row[col].elementProperties.GroupBlock]"
