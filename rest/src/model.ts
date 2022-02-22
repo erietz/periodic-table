@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import util from "util";
 
 const db = mongoose.connection;
 // connection string on port 27017 using database named periodicTable
@@ -14,6 +15,7 @@ db.once("foo", () => {
 
 export interface Table {
     name: string,
+    date: Date,
     data: {
         [key: string]: {
             [key: string]: string
@@ -21,24 +23,47 @@ export interface Table {
     }[]
 };
 
-const TableSchema = new mongoose.Schema<Table>({
-    name: { type: String, required: true },
-    data: [
-        {
-            // type: mongoose.SchemaTypes.Mixed
-            type: Map,
-            of: {
-                type: String
+const TableSchema = new mongoose.Schema<Table>(
+    {
+        name: { type: String, required: true },
+        date: { type: Date, required: true },
+        data: [
+            {
+                type: Map,
+                of: {
+                    type: String
+                },
+                validate: (map: Map<string, string>) => {
+                    const requiredValues: string[] = [];
+                    const regex = /col\d+/;
+
+                    for (const [key, value] of map.entries()) {
+                        if (regex.test(key) == false) {
+                            throw new Error(`Key must be of the form ${regex}`);
+                        }
+                        requiredValues.push(value);
+                    }
+
+                    for (const obj of requiredValues) {
+                        for (const key of ["AtomicNumber", "GroupBlock"]) {
+                            if (Object.keys(obj).length > 0 && !(obj.hasOwnProperty(key))) {
+                                throw new Error(`Required key: ${key} is missing from ${util.inspect(obj)}`);
+                            }
+                        }
+                    }
+                }
             }
-        }
-    ]
-});
+        ]
+    },
+    { minimize: false }
+);
 
 const TableModel = mongoose.model<Table>("PeriodicTable", TableSchema);
 
 export async function saveTable(): Promise<any> {
     const doc = new TableModel({
         name: "Initial Test Table",
+        date: new Date(),
         data: [
             {
                 "col1": {

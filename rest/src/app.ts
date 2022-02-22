@@ -17,8 +17,12 @@ app.get("/tables", (req, res) => {
 });
 
 app.get("/savetest", async (req, res) => {
-    await saveTable();
-    res.send("Table saved maybe???");
+    saveTable()
+        .then(json => res.send(json))
+        .catch(err => {
+            console.error(err)
+            res.send(err)
+        });
 });
 
 app.listen(PORT, () => {
