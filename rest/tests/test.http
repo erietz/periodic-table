@@ -1,2 +1,8 @@
 # Get request to home
 GET http://localhost:3000/
+
+# Display all tables
+GET http://localhost:3000/tables
+
+# Save a test table
+GET http://localhost:3000/savetest
