@@ -25,9 +25,7 @@ const TableSchema = new mongoose.Schema<Table>({
     name: { type: String, required: true },
     data: [
         {
-            type: {
-                type: String
-            }
+            type: mongoose.SchemaTypes.Mixed
         }
     ]
 });
