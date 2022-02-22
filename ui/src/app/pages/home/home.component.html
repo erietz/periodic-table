@@ -1,16 +1,18 @@
 <div class="content" role="main">
 
   <h2>Periodic Table of the
-    <label for="tables"></label>
-    <select id="tables">
-      <option>Elements</option>
-    </select>
+      <label for="tables"></label>
+      <select id="tables" *ngFor="let name of tableNames">
+        <option>Foo</option>
+        <option>{{name}}</option>
+      </select>
   </h2>
 
   <p>Hover over an element to populate the properties table on the left.</p>
   <p>Click an element to read additional information.</p>
 
 
-  <app-table></app-table>
+  <button (click)="increment()">submit</button>
+  <app-table inputTable="tables[idx]"></app-table>
 
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { Cell } from '../cell/cell.component';
 import { periodic_data } from 'src/assets/periodic_grid';
 import { COLOR_PALETTE } from 'src/assets/color_palette';
@@ -8,29 +8,37 @@ import { COLOR_PALETTE } from 'src/assets/color_palette';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit, OnChanges {
   // TODO change any to a better type
+
   public table: {[index: string]: any}[];
   public columns: string[];
   public groups: string[];
   public palette: {[index: string]: string};
   public properties: {[index: string]: string};
 
+  @Input() inputTable: any = [];
+
   constructor() {
-    [this.table, this.groups] = this.loadData();
+    [this.table, this.groups] = this.loadData(periodic_data);
     this.columns = Object.keys(this.table[0]);
     this.palette = this.generateColorPalette();
     this.properties = this.table[0][this.columns[0]].elementProperties;
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("CHANGES HERE");
+    this.loadData(this.inputTable);
+  }
+
   ngOnInit(): void {
   }
 
-  loadData(): [{[index: string]: Cell}[], string[]] {
+  loadData(foo: any): [{[index: string]: Cell}[], string[]] {
     let data: {[index: string]: Cell}[] = [];
     let groups = new Set<string>();
 
-    for (const row of periodic_data) {
+    for (const row of foo) {
       let newRow: {[index: string]: Cell} = {};
       for (const col in row) {
 
