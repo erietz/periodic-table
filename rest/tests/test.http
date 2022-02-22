@@ -4,5 +4,137 @@ GET http://localhost:3000/
 # Display all tables
 GET http://localhost:3000/tables
 
-# Save a test table
-GET http://localhost:3000/savetest
+# Save a test table with valid schema
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "name": "Test Table",
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1",
+                "GroupBlock": "Foo"
+            },
+            "col2": {},
+            "col3": {}
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+
+# Save a test table with bad schema (missing date)
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "name": "Test Table",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1",
+                "GroupBlock": "Foo"
+            },
+            "col2": {},
+            "col3": {}
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+
+# Save a test table with bad schema (missing name)
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1",
+                "GroupBlock": "Foo"
+            },
+            "col2": {},
+            "col3": {}
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+
+# Save a test table with bad schema (missing GroupBlock)
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "name": "Test Table",
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1"
+            },
+            "col2": {},
+            "col3": {}
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+
+# Save a test table with bad schema (missing AtomicNumber)
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "name": "Test Table",
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "GroupBlock": "Foo"
+            },
+            "col2": {},
+            "col3": {}
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+
+# Save a test table with bad schema (col name incorrect regex)
+POST http://localhost:3000/savetable
+content-type: application/json
+
+{
+    "name": "Test Table",
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1",
+                "GroupBlock": "Foo"
+            },
+            "col2": {},
+            "colx": {}
+        }
+    ]
+}

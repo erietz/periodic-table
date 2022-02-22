@@ -11,13 +11,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/tables", (req, res) => {
-    getTables({}, "")
+    getTables({}, "", 0)
         .then( (tables: Table[]) => res.json(tables))
         .catch( err => console.error(err));
 });
 
-app.get("/savetest", async (req, res) => {
-    saveTable()
+app.post("/savetable", async (req, res) => {
+    saveTable(req.body)
         .then(json => res.send(json))
         .catch(err => {
             console.error(err)
@@ -26,5 +26,5 @@ app.get("/savetest", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Timezones by location application is running on port ${PORT}.`);
+  console.log(`PeriodicTable REST API is running on port ${PORT}.`);
 });

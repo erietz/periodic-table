@@ -60,44 +60,18 @@ const TableSchema = new mongoose.Schema<Table>(
 
 const TableModel = mongoose.model<Table>("PeriodicTable", TableSchema);
 
-export async function saveTable(): Promise<any> {
-    const doc = new TableModel({
-        name: "Initial Test Table",
-        date: new Date(),
-        data: [
-            {
-                "col1": {
-                    "AtomicNumber":"1",
-                    "Symbol":"H",
-                    "Name":"Hydrogen",
-                    "AtomicMass":"1.0080",
-                    "CPKHexColor":"FFFFFF",
-                    "ElectronConfiguration":"1s1",
-                    "Electronegativity":"2.2",
-                    "AtomicRadius":"120",
-                    "IonizationEnergy":"13.598",
-                    "ElectronAffinity":"0.754",
-                    "OxidationStates":"+1, -1",
-                    "StandardState":"Gas",
-                    "MeltingPoint":"13.81",
-                    "BoilingPoint":"20.28",
-                    "Density":"0.00008988",
-                    "GroupBlock":"Nonmetal",
-                    "YearDiscovered":"1766"
-                },
-                "col2": {},
-                "col3": {},
-                "col4": {}
-            }
-        ]
-    });
-
-    return doc.save();
+export async function saveTable(data: Table): Promise<mongoose.Document> {
+    return new TableModel(data).save();
 }
 
-export async function getTables(filter: object, projection: string): Promise<Table[]> {
+export async function getTables(
+    filter: object,
+    projection: string,
+    limit: number
+): Promise<Table[]> {
     const query = TableModel.find(filter, projection)
         .select(projection)
+        .limit(limit);
     return query.exec();
 }
 
