@@ -1,5 +1,20 @@
 <div class="content">
-  <p>This page will be for creating a new table</p>
+  <p>
+    This page is for creating a new table.
+  </p>
+
+  <div style="border: 1px solid white; margin: 20px; padding: 20px;">
+    Create table from a template?
+    <select id="tables">
+      <option>Elements</option>
+    </select>
+  </div>
+
+  <div style="border: 1px solid white; margin: 20px; padding: 20px;">
+  <p>
+    Or create a table manually (this is an advanced feature and may take more
+    time)?
+  </p>
 
   <label for="rows">Rows</label>
   <input name="rows" type="number" min="1" max="50">
@@ -7,28 +22,33 @@
   <label for="columns">Columns</label>
   <input name="columns" type="number" min="1" max="50">
 
+  </div>
+
+  <button>Save the table to the DB</button>
+
+
   <table>
     <tbody>
       <tr>
-        <td> This </td>
-        <td> table </td>
-        <td> will </td>
-        <td> be </td>
-        <td> dynamically </td>
+        <td class=delete (click)="openDialog()"> This </td>
+        <td class=delete (click)="openDialog()"> table </td>
+        <td class=delete (click)="openDialog()"> will </td>
+        <td class=delete (click)="openDialog()"> be </td>
+        <td class=delete (click)="openDialog()"> dynamically </td>
       </tr>
       <tr>
-        <td>populated</td>
-        <td>with</td>
-        <td>the</td>
-        <td>number</td>
-        <td>of</td>
+        <td class="delete" (click)=openDialog()>populated</td>
+        <td class="delete" (click)=openDialog()>with</td>
+        <td class="delete" (click)=openDialog()>the</td>
+        <td class="delete" (click)=openDialog()>number</td>
+        <td class="delete" (click)=openDialog()>of</td>
       </tr>
       <tr>
-        <td>rows</td>
-        <td>and</td>
-        <td>columns</td>
-        <td>from</td>
-        <td>above</td>
+        <td class="delete" (click)="openDialog()">rows</td>
+        <td class="delete" (click)="openDialog()">and</td>
+        <td class="delete" (click)="openDialog()">columns</td>
+        <td class="delete" (click)="openDialog()">from</td>
+        <td class="delete" (click)="openDialog()">above</td>
       </tr>
     </tbody>
   </table>
