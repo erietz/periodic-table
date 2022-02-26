@@ -3,7 +3,8 @@
   <div id="left">
     <app-cell-properties [properties]="properties" > </app-cell-properties>
   </div>
-  <div id="right">
+
+  <div id="middle">
     <table>
       <tr *ngFor="let row of table">
         <td *ngFor="let col of columns">
@@ -16,6 +17,10 @@
         </td>
       </tr>
     </table>
+  </div>
+
+  <div id="right">
     <app-legend [groups]="groups" [palette]="palette"></app-legend>
   </div>
+
 </div>

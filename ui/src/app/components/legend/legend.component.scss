@@ -1,9 +1,12 @@
 .main {
-  // border: 1px solid;
+  border: 3px solid white;
+  text-align: center;
+  position: sticky;
+  top: 1rem;
 }
 
 ul {
-  display: inline-block;
+  // display: inline-block;
   list-style-type: none;
   padding: 3px;
   margin: 0px;
@@ -16,3 +19,4 @@ li {
   color: black;
   cursor: pointer;
 }
+
