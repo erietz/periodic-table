@@ -7,6 +7,7 @@ export interface Cell {
   elementName: string;
   elementNumber: string;
   elementProperties: {[index: string]: string};
+  elementDescription?: string;
 }
 
 @Component({
@@ -24,7 +25,8 @@ export class CellComponent {
       'elementSymbol': 'elementSymbol',
       'elementName': 'elementName',
       "elementNumber": "elementNumber",
-      "elementProperties": {}
+      "elementProperties": {},
+      "elementDescription": ""
     };
     this.backgroundColor = "#3e3e3e";
   }
@@ -34,12 +36,24 @@ export class CellComponent {
   }
 
   openDialog() {
-    this.dialog.open(PopupComponent, {
-      data: {
-        tmpData: "This popup will display data for an element obtained from" +
-        " a teammates microservice"
-      }
-    });
+    fetch("/chem-wiki", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name: this.cell.elementName})
+    })
+      .then(data => data.json())
+      .then(json => {
+
+        this.dialog.open(PopupComponent, {
+          data: {
+            ...this.cell,
+            elementDescription: json[this.cell.elementName]
+          }
+        });
+      })
+      .catch(err => console.error(err));
   }
 
 }

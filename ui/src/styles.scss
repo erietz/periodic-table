@@ -12,10 +12,15 @@
   --color-triadic2: #69e000;
 }
 
+html, body { height: 100%; }
+
 body {
   color: white;
   background-color: #262626 !important;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a {
+  color: var(--color-complementary);
+}
