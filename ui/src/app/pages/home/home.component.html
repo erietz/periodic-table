@@ -1,14 +1,16 @@
 <div class="content" role="main">
 
   <h2>Periodic Table of the
-      <select (change)="onSelectorChange($event)" >
-        <option *ngFor="let name of tableNames" >
+      <select (change)="onSelectorChange($event)">
+        <option
+          *ngFor="let name of tableNames"
+          [selected]="name === defaultName"
+          [value]="name"
+        >
           {{name}}
         </option>
       </select>
   </h2>
-
-  <button type="submit">click me</button>
 
   <p>Hover over an element to populate the properties table on the left.</p>
   <p>Click an element to read additional information.</p>

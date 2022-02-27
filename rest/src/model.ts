@@ -25,7 +25,7 @@ export interface Table {
 
 const TableSchema = new mongoose.Schema<Table>(
     {
-        name: { type: String, required: true },
+        name: { type: String, unique: true, required: true },
         date: { type: Date, required: true },
         data: [
             {

@@ -6,23 +6,23 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
     res.send({ some: "JSON" });
 });
 
-app.get("/api/tables", (req, res) => {
+app.get("/api/tables", (_, res) => {
     getTables({}, "", 0)
         .then( (tables: Table[]) => res.json(tables))
         .catch( err => console.error(err));
 });
 
 app.get("/api/tables/:name", (req, res) => {
-    getTables({name: req.params.name}, "", 0)
+    getTables({name: req.params.name}, "", 1)
         .then( (tables: Table[]) => res.json(tables))
         .catch( err => console.error(err));
 });
 
-app.get("/api/tablenames", (req, res) => {
+app.get("/api/tablenames", (_, res) => {
     getTables({}, "", 0)
         .then( (tables: Table[]) => {
             const names: string[] = [];

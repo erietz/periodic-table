@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public tableNames: string[] = [];
-  public tableName: string = "Default Table";
+  public tableName: string = "Elements";
+  public defaultName: string = "Elements";
 
   constructor() {
   }
@@ -17,7 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   onSelectorChange(event: any) {
-    console.log("Selector has been changed");
     const element = event.currentTarget as HTMLInputElement
     const value = element.value
     this.tableName = value;
@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
     const response = await fetch("/api/tablenames")
     const json = await response.json();
     this.tableNames = json;
-    console.log("TABLE NAMES", this.tableNames);
   }
 
 }
