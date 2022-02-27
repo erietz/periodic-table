@@ -16,6 +16,24 @@ app.get("/api/tables", (req, res) => {
         .catch( err => console.error(err));
 });
 
+app.get("/api/tables/:name", (req, res) => {
+    getTables({name: req.params.name}, "", 0)
+        .then( (tables: Table[]) => res.json(tables))
+        .catch( err => console.error(err));
+});
+
+app.get("/api/tablenames", (req, res) => {
+    getTables({}, "", 0)
+        .then( (tables: Table[]) => {
+            const names: string[] = [];
+            for (let table of tables) {
+                names.push(table["name"]);
+            }
+            res.json(names);
+        })
+        .catch( err => console.error(err));
+});
+
 app.post("/api/savetable", async (req, res) => {
     saveTable(req.body)
         .then(json => res.send(json))

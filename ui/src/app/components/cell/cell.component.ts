@@ -2,12 +2,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
 
+
 export interface Cell {
   elementSymbol: string;
   elementName: string;
   elementNumber: string;
   elementProperties: {[index: string]: string};
-  elementDescription?: string;
+}
+
+export interface CellWithDescription extends Cell {
+  elementDescription: string;
 }
 
 @Component({
@@ -26,7 +30,6 @@ export class CellComponent {
       'elementName': 'elementName',
       "elementNumber": "elementNumber",
       "elementProperties": {},
-      "elementDescription": ""
     };
     this.backgroundColor = "#3e3e3e";
   }
@@ -45,13 +48,11 @@ export class CellComponent {
     })
       .then(data => data.json())
       .then(json => {
-
-        this.dialog.open(PopupComponent, {
-          data: {
-            ...this.cell,
-            elementDescription: json[this.cell.elementName]
-          }
-        });
+        const data: CellWithDescription = {
+          ...this.cell,
+          elementDescription: json[this.cell.elementName],
+        }
+        this.dialog.open(PopupComponent, { data: data });
       })
       .catch(err => console.error(err));
   }

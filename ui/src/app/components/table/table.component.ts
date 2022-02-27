@@ -9,8 +9,6 @@ import { COLOR_PALETTE } from 'src/assets/color_palette';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit, OnChanges {
-  // TODO change any to a better type
-
   public table: {[index: string]: any}[];
   public columns: string[];
   public groups: string[];
@@ -23,15 +21,19 @@ export class TableComponent implements OnInit, OnChanges {
     [this.table, this.groups] = this.loadData(periodic_data);
     this.columns = Object.keys(this.table[0]);
     this.palette = this.generateColorPalette();
-    this.properties = this.table[0][this.columns[0]].elementProperties;
+    this.properties = this.table[0][this.columns[0]]["elementProperties"];
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("CHANGES HERE");
-    this.loadData(this.inputTable);
+    console.log("CHANGES HERE", changes);
+    // [this.table, this.groups] = this.loadData(changes["inputTable"]["currentValue"]);
+    // console.log("fetching table with name", changes["inputTable"]["currentValue"]);
+    this.getTableByName(changes["inputTable"]["currentValue"]);
+    // console.log("what the hell", this.table, this.groups);
   }
 
   ngOnInit(): void {
+    console.log("ngOnInit has been called");
   }
 
   loadData(foo: any): [{[index: string]: Cell}[], string[]] {
@@ -76,6 +78,24 @@ export class TableComponent implements OnInit, OnChanges {
     }
 
     return tmpPalette;
+  }
+
+  async getDefaultTable() {
+    const response = await fetch("/api/tables/Default Table")
+    const json = await response.json();
+    this.table = json;
+  };
+
+  async getTableByName(name: string) {
+    const response = await fetch(`/api/tables/${name}`)
+    const json = await response.json();
+    console.log("Results of fetching data", json[0]["data"]);
+    // this.table = json[0]["data"];
+    [this.table, this.groups] = this.loadData(json[0]["data"]);
+    this.columns = Object.keys(this.table[0]);
+    this.palette = this.generateColorPalette();
+
+    console.log(`table ${name} has been fetched`, this.table, this.groups);
   }
 
 }

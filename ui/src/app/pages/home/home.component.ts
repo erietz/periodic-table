@@ -7,38 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   public tableNames: string[] = [];
-  public tables: any = [];
-  public idx: number = 0;
+  public tableName: string = "Default Table";
 
   constructor() {
-    this.fetchTables();
-  }
-
-  increment() {
-    console.log("ingrementing idx");
-    this.idx += 1;
   }
 
   ngOnInit(): void {
+    this.getTableNames();
   }
 
-  fetchTables() {
-    fetch("/api/tables", {
-      method: "GET"
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json);
-        this.tables = json;
+  onSelectorChange(event: any) {
+    console.log("Selector has been changed");
+    const element = event.currentTarget as HTMLInputElement
+    const value = element.value
+    this.tableName = value;
+  }
 
-        const tableNames = [];
-        for (const i of json) {
-          tableNames.push(i["name"]);
-        }
-        this.tableNames = tableNames;
-
-      })
-      .catch(err => console.error(err));
+  async getTableNames() {
+    const response = await fetch("/api/tablenames")
+    const json = await response.json();
+    this.tableNames = json;
+    console.log("TABLE NAMES", this.tableNames);
   }
 
 }

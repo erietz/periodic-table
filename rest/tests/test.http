@@ -5,7 +5,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/tables
 
 # Save a test table with valid schema
-POST http://localhost:3000/savetable
+POST http://localhost:3000/api/savetable
 content-type: application/json
 
 {
@@ -138,3 +138,47 @@ content-type: application/json
         }
     ]
 }
+
+# Save a test table with valid schema
+POST http://localhost:3000/api/savetable
+content-type: application/json
+
+{
+    "name": "Ethan table",
+    "date": "2022-02-02",
+    "data": [
+        {
+            "col1": {
+                "AtomicNumber": "1",
+                "Symbol": "F",
+                "Name": "Foo",
+                "GroupBlock": "Test1",
+                "Property1": "Property 1",
+                "Property2": "Property 2"
+            },
+            "col2": {
+                "AtomicNumber": "2",
+                "Symbol": "B",
+                "Name": "Bar",
+                "GroupBlock": "Test2",
+                "Property1": "Property 1",
+                "Property2": "Property 2"
+            },
+            "col3": {
+                "AtomicNumber": "3",
+                "Symbol": "Ba",
+                "Name": "Baz",
+                "GroupBlock": "Test1",
+                "Property1": "Property 1",
+                "Property2": "Property 2"
+
+            }
+        },
+        {
+            "col1": {},
+            "col2": {},
+            "col3": {}
+        }
+    ]
+}
+

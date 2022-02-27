@@ -1,4 +1,7 @@
-export const periodic_data : {[index: string]: {[index: string]: string}}[] = [
+type Column = {[index: string]: string };
+type Row = {[index: string]: Column};
+
+export const periodic_data : Row[] = [
   {
     "col1": {
       "AtomicNumber":"1",

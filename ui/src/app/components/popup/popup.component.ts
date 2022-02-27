@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Cell } from '../cell/cell.component';
+import { CellWithDescription } from '../cell/cell.component';
 
 @Component({
   selector: 'app-popup',
@@ -8,9 +8,9 @@ import { Cell } from '../cell/cell.component';
   styleUrls: ['./popup.component.scss']
 })
 export class PopupComponent implements OnInit {
-  public cell: Cell
+  public cell: CellWithDescription
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Cell) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: CellWithDescription) {
     this.cell = data
   }
 
