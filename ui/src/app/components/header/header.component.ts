@@ -20,4 +20,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['create']);
   }
 
+  goToDeletePage(): void {
+    this.router.navigate(['delete']);
+  }
+
 }

@@ -14,6 +14,8 @@ import { CreateTableComponent } from './pages/create-table/create-table.componen
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DeleteTableComponent } from './pages/delete-table/delete-table.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { HeaderComponent } from './components/header/header.component';
     CreateTableComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    DeleteTableComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
