@@ -75,3 +75,7 @@ export async function getTables(
     return query.exec();
 }
 
+export async function deleteTable(name: string): Promise<object> {
+    return TableModel.deleteOne({ name: name });
+}
+

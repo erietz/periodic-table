@@ -1,5 +1,5 @@
 import express from 'express';
-import { getTables, saveTable, Table } from "./model";
+import { deleteTable, getTables, saveTable, Table } from "./model";
 
 const app = express();
 const PORT = 3000;
@@ -41,6 +41,17 @@ app.post("/api/savetable", async (req, res) => {
             console.error(err)
             res.send(err)
         });
+});
+
+app.delete("/api/delete/:name", (req, res) => {
+    if (req.params.name === "Elements") {
+        res.json({ Error: "Cannot delete the periodic table of the Elements"});
+        return;
+    }
+
+    deleteTable(req.params.name)
+        .then( x => res.json(x))
+        .catch( err => console.error(err));
 });
 
 app.listen(PORT, () => {
