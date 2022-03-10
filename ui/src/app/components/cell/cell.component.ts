@@ -1,44 +1,25 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
-
-
-export interface Cell {
-  elementSymbol: string;
-  elementName: string;
-  elementNumber: string;
-  elementProperties: {[index: string]: string};
-}
-
-export interface CellWithDescription extends Cell {
-  elementDescription: string;
-}
+import { Cell, CellWithDescription, CellBaseComponent } from "../cell-base/cell-base.component";
 
 @Component({
   selector: 'app-cell',
-  templateUrl: './cell.component.html',
-  styleUrls: ['./cell.component.scss']
+  templateUrl: '../cell-base/cell-base.component.html',
+  styleUrls: ['../cell-base/cell-base.component.scss']
 })
-export class CellComponent {
-  @Input() cell: Cell;
-  @Input() backgroundColor: string;
+export class CellComponent extends CellBaseComponent {
   @Output() displayProperties: EventEmitter<Cell> = new EventEmitter<Cell>();
 
   constructor(private dialog: MatDialog) {
-    this.cell = {
-      'elementSymbol': 'elementSymbol',
-      'elementName': 'elementName',
-      "elementNumber": "elementNumber",
-      "elementProperties": {},
-    };
-    this.backgroundColor = "#3e3e3e";
+    super();
   }
 
-  onHover() {
+  override onHover() {
     this.displayProperties.emit(this.cell);
   }
 
-  openDialog() {
+  override openDialog() {
     fetch("/chem-wiki", {
       method: "POST",
       headers: {

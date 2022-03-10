@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { CellWithDescription } from '../cell/cell.component';
+import { CellWithDescription } from '../cell-base/cell-base.component';
 
 @Component({
   selector: 'app-popup',

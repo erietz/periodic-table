@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
-import { Cell } from '../cell/cell.component';
+import { Cell } from '../cell-base/cell-base.component';
 import { COLOR_PALETTE } from 'src/assets/color_palette';
 
 @Component({

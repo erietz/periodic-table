@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../../components/popup/popup.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Row, Column } from "src/app/types/types";
-import { Cell } from "src/app/components/cell/cell.component";
+import { Cell } from "src/app/components/cell-base/cell-base.component";
 
 // TODO: A huge portion of this class and the other table class
 // are the exact same. I need to create a common base class that
