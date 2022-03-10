@@ -1,56 +1,85 @@
 <div class="content">
-  <p>
-    This page is for creating a new table.
-  </p>
 
-  <div style="border: 1px solid white; margin: 20px; padding: 20px;">
-    Create table from a template?
-    <select id="tables">
-      <option>Elements</option>
-    </select>
-  </div>
+  <form [formGroup]="tableSizeForm" (ngSubmit)="onSubmit()">
+    <h2>Table Size</h2>
+    <label>
+      Rows
+      <input type="number" formControlName="rows" required>
+    </label>
+    <label>
+      Columns
+      <input type="number" formControlName="columns" required>
+    </label>
 
-  <div style="border: 1px solid white; margin: 20px; padding: 20px;">
-  <p>
-    Or create a table manually (this is an advanced feature and may take more
-    time)?
-  </p>
-
-  <label for="rows">Rows</label>
-  <input name="rows" type="number" min="1" max="50">
-
-  <label for="columns">Columns</label>
-  <input name="columns" type="number" min="1" max="50">
-
-  </div>
-
-  <button>Save the table to the DB</button>
-
+    <button>Initialize table</button>
+  </form>
 
   <table>
     <tbody>
-      <tr>
-        <td class=delete (click)="openDialog()"> This </td>
-        <td class=delete (click)="openDialog()"> table </td>
-        <td class=delete (click)="openDialog()"> will </td>
-        <td class=delete (click)="openDialog()"> be </td>
-        <td class=delete (click)="openDialog()"> dynamically </td>
-      </tr>
-      <tr>
-        <td class="delete" (click)=openDialog()>populated</td>
-        <td class="delete" (click)=openDialog()>with</td>
-        <td class="delete" (click)=openDialog()>the</td>
-        <td class="delete" (click)=openDialog()>number</td>
-        <td class="delete" (click)=openDialog()>of</td>
-      </tr>
-      <tr>
-        <td class="delete" (click)="openDialog()">rows</td>
-        <td class="delete" (click)="openDialog()">and</td>
-        <td class="delete" (click)="openDialog()">columns</td>
-        <td class="delete" (click)="openDialog()">from</td>
-        <td class="delete" (click)="openDialog()">above</td>
-      </tr>
+      <tr *ngFor="let row of table">
+        <td *ngFor="let col of columns">
+          <app-cell
+            [cell]="row[col]"
+            [backgroundColor]="palette[row[col].elementProperties.GroupBlock]"
+            (displayProperties)="populateProperties($event)"
+            >
+          </app-cell>
+        </td>
     </tbody>
   </table>
+
+  <!-- <p> -->
+  <!--   This page is for creating a new table. -->
+  <!-- </p> -->
+
+  <!-- <div style="border: 1px solid white; margin: 20px; padding: 20px;"> -->
+  <!--   Create table from a template? -->
+  <!--   <select id="tables"> -->
+  <!--     <option>Elements</option> -->
+  <!--   </select> -->
+  <!-- </div> -->
+
+  <!-- <div style="border: 1px solid white; margin: 20px; padding: 20px;"> -->
+  <!-- <p> -->
+  <!--   Or create a table manually (this is an advanced feature and may take more -->
+  <!--   time)? -->
+  <!-- </p> -->
+
+  <!-- <label for="rows">Rows</label> -->
+  <!-- <input name="rows" type="number" min="1" max="50"> -->
+
+  <!-- <label for="columns">Columns</label> -->
+  <!-- <input name="columns" type="number" min="1" max="50"> -->
+
+  <!-- </div> -->
+
+  <!-- <button>Save the table to the DB</button> -->
+
+
+  <!-- <table> -->
+  <!--   <tbody> -->
+  <!--     <tr> -->
+  <!--       <td class=delete (click)="openDialog()"> This </td> -->
+  <!--       <td class=delete (click)="openDialog()"> table </td> -->
+  <!--       <td class=delete (click)="openDialog()"> will </td> -->
+  <!--       <td class=delete (click)="openDialog()"> be </td> -->
+  <!--       <td class=delete (click)="openDialog()"> dynamically </td> -->
+  <!--     </tr> -->
+  <!--     <tr> -->
+  <!--       <td class="delete" (click)=openDialog()>populated</td> -->
+  <!--       <td class="delete" (click)=openDialog()>with</td> -->
+  <!--       <td class="delete" (click)=openDialog()>the</td> -->
+  <!--       <td class="delete" (click)=openDialog()>number</td> -->
+  <!--       <td class="delete" (click)=openDialog()>of</td> -->
+  <!--     </tr> -->
+  <!--     <tr> -->
+  <!--       <td class="delete" (click)="openDialog()">rows</td> -->
+  <!--       <td class="delete" (click)="openDialog()">and</td> -->
+  <!--       <td class="delete" (click)="openDialog()">columns</td> -->
+  <!--       <td class="delete" (click)="openDialog()">from</td> -->
+  <!--       <td class="delete" (click)="openDialog()">above</td> -->
+  <!--     </tr> -->
+  <!--   </tbody> -->
+  <!-- </table> -->
 
 </div>

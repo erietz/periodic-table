@@ -47,10 +47,10 @@ export class TableComponent implements OnInit, OnChanges {
         const d = row[col];
 
         newRow[col] = {
-          'elementSymbol': d['Symbol'],
-          'elementName': d['Name'],
-          'elementNumber': d['AtomicNumber'],
-          'elementProperties': d
+          elementSymbol: d['Symbol'],
+          elementName: d['Name'],
+          elementNumber: d['AtomicNumber'],
+          elementProperties: d
         }
 
         if (d['GroupBlock'] != null && !groups.has(d['GroupBlock'])) {

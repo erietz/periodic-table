@@ -1,5 +1,4 @@
-type Column = {[index: string]: string };
-type Row = {[index: string]: Column};
+import { Row } from "src/app/types/types";
 
 export const periodic_data : Row[] = [
   {

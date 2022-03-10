@@ -15,7 +15,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DeleteTableComponent } from './pages/delete-table/delete-table.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateCellFormComponent } from './components/create-cell-form/create-cell-form.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +30,12 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
-    DeleteTableComponent
+    DeleteTableComponent,
+    CreateCellFormComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
