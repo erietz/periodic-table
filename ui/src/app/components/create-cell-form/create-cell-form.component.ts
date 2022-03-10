@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-create-cell-form',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-cell-form.component.scss']
 })
 export class CreateCellFormComponent implements OnInit {
+  public foo: any;
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    this.foo = data;
+  }
 
   ngOnInit(): void {
   }

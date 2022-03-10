@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Row, Column } from "src/app/types/types";
 import { Cell } from "src/app/components/cell-base/cell-base.component";
 import { CellCreateComponent } from 'src/app/components/cell-create/cell-create.component';
+import { CreateCellFormComponent } from 'src/app/components/create-cell-form/create-cell-form.component';
 
 // TODO: A huge portion of this class and the other table class
 // are the exact same. I need to create a common base class that
@@ -69,14 +70,6 @@ export class CreateTableComponent implements OnInit {
     }
     this.table = table;
 
-  }
-
-  openDialog() {
-    this.dialog.open(PopupComponent, {
-      data: {
-        tmpData: "This is a form to enter properties for a cell"
-      }
-    });
   }
 
   // used in the html to populates the properties table on the left
