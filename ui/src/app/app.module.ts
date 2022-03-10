@@ -18,6 +18,7 @@ import { DeleteTableComponent } from './pages/delete-table/delete-table.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateCellFormComponent } from './components/create-cell-form/create-cell-form.component';
 import { CellBaseComponent } from './components/cell-base/cell-base.component';
+import { CellCreateComponent } from './components/cell-create/cell-create.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CellBaseComponent } from './components/cell-base/cell-base.component';
     HeaderComponent,
     DeleteTableComponent,
     CreateCellFormComponent,
-    CellBaseComponent
+    CellBaseComponent,
+    CellCreateComponent
   ],
   imports: [
     FormsModule,

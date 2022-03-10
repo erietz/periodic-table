@@ -4,6 +4,7 @@ import { PopupComponent } from '../../components/popup/popup.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Row, Column } from "src/app/types/types";
 import { Cell } from "src/app/components/cell-base/cell-base.component";
+import { CellCreateComponent } from 'src/app/components/cell-create/cell-create.component';
 
 // TODO: A huge portion of this class and the other table class
 // are the exact same. I need to create a common base class that
@@ -22,6 +23,7 @@ export class CreateTableComponent implements OnInit {
   public palette: {[index: string]: string} = {};
   public tableSizeForm: FormGroup;
   public properties: {[index: string]: string} = {};
+  public defaultColor: string = "#007173";
 
   constructor(
     private dialog: MatDialog,

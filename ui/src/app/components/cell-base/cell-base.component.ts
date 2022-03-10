@@ -28,7 +28,7 @@ export class CellBaseComponent {
       "elementNumber": "elementNumber",
       "elementProperties": {},
     };
-    this.backgroundColor = "#3e3e3e";
+    this.backgroundColor = "#007173";
   }
 
   public onHover() {
