@@ -5,6 +5,7 @@ import { Row, Column } from "src/app/types/types";
 import { Cell } from "src/app/components/cell-base/cell-base.component";
 import { CellCreateComponent } from 'src/app/components/cell-create/cell-create.component';
 import { CreateCellFormComponent } from 'src/app/components/create-cell-form/create-cell-form.component';
+import { COLOR_PALETTE } from 'src/assets/color_palette';
 
 // TODO: A huge portion of this class and the other table class
 // are the exact same. I need to create a common base class that
@@ -19,11 +20,11 @@ export class CreateTableComponent implements OnInit {
 
   public table: {[index: string]: Cell}[] = [];
   public columns: string[] = [];
-  public groups: string[] = [];
-  public palette: {[index: string]: string} = {};
+  public groups: Set<string> = new Set<string>(["Default"]);
+  public palette: {[index: string]: string} = {
+    "Default": "#007173"
+  };
   public tableSizeForm: FormGroup;
-  public properties: {[index: string]: string} = {};
-  public defaultColor: string = "#007173";
   public tableInProgress: boolean = false;
 
   constructor(
@@ -69,7 +70,9 @@ export class CreateTableComponent implements OnInit {
           elementSymbol: "Symbol",
           elementName: "Name",
           elementNumber: "1",
-          elementProperties: {},
+          elementProperties: {
+            GroupBlock: "Default",
+          },
         };
       }
       table.push(row);
@@ -78,4 +81,22 @@ export class CreateTableComponent implements OnInit {
 
   }
 
+  generateColorPalette(): {[index: string]: string} {
+    const palette: {[index: string]: string} = {};
+
+    let i = 0;
+    for (const group of this.groups) {
+      palette[group] = COLOR_PALETTE[i];
+      i++;
+    }
+
+    return palette;
+  }
+
+  setDefaultColor(groupBlock: any): void {
+    console.log("setDefaultColor has been called", groupBlock);
+    this.groups.add(groupBlock);
+    this.palette = this.generateColorPalette();
+    console.log("this.palette", this.palette);
+  }
 }

@@ -4,6 +4,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,6 +51,7 @@ import { CellCreateComponent } from './components/cell-create/cell-create.compon
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

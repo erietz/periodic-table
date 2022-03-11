@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {CellBaseComponent} from '../cell-base/cell-base.component';
 import { PopupComponent } from '../popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,6 +10,7 @@ import { CreateCellFormComponent } from '../create-cell-form/create-cell-form.co
   styleUrls: ['../cell-base/cell-base.component.scss']
 })
 export class CellCreateComponent extends CellBaseComponent implements OnInit {
+  @Output() groupBlock: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(private dialog: MatDialog) {
     super();
@@ -29,6 +30,7 @@ export class CellCreateComponent extends CellBaseComponent implements OnInit {
         return;
       }
       this.cell = result;
+      this.groupBlock.emit(result["GroupBlock"]);
     });
 
   }

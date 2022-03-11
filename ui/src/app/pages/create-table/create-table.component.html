@@ -23,7 +23,8 @@
         <td *ngFor="let col of columns">
           <app-cell-create
             [cell]="row[col]"
-            [backgroundColor]="defaultColor"
+            [backgroundColor]="palette[row[col].elementProperties['GroupBlock']]"
+            (groupBlock)="setDefaultColor($event)"
             >
           </app-cell-create>
         </td>

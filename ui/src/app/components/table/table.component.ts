@@ -10,7 +10,7 @@ import { COLOR_PALETTE } from 'src/assets/color_palette';
 export class TableComponent implements OnInit, OnChanges {
   public table: {[index: string]: any}[] = [];
   public columns: string[] = [];
-  public groups: string[] = [];
+  public groups: Set<string> = new Set<string>();
   public palette: {[index: string]: string} = {};
   public properties: {[index: string]: string} = {};
 
@@ -36,7 +36,7 @@ export class TableComponent implements OnInit, OnChanges {
   }
 
 
-  parseData(foo: any): [{[index: string]: Cell}[], string[]] {
+  parseData(foo: any): [{[index: string]: Cell}[], Set<string>] {
     let data: {[index: string]: Cell}[] = [];
     let groups = new Set<string>();
 
@@ -61,16 +61,16 @@ export class TableComponent implements OnInit, OnChanges {
       data.push(newRow);
     }
 
-    return [data, Array.from(groups)];
+    return [data, groups];
   }
 
   generateColorPalette(): {[index: string]: string} {
     const palette: {[index: string]: string} = {};
 
-    for (let i=0; i<COLOR_PALETTE.length; i++) {
-      if (this.groups[i] != null) {
-        palette[this.groups[i]] = COLOR_PALETTE[i];
-      }
+    let i = 0;
+    for (const group of this.groups) {
+      palette[group] = COLOR_PALETTE[i];
+      i++;
     }
 
     return palette;

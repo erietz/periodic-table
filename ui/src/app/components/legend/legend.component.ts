@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./legend.component.scss']
 })
 export class LegendComponent implements OnInit {
-  @Input() groups: string[] = [];
+  @Input() groups: Set<string> = new Set<string>();
   @Input() palette: {[index: string]: string} = {};
 
   constructor() { }

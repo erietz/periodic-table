@@ -1,15 +1,17 @@
 <div class="content" role="main">
 
   <h2>Periodic Table of the
-      <select (change)="onSelectorChange($event)">
-        <option
+    <mat-form-field>
+
+      <mat-select (change)="onSelectorChange($event)">
+        <mat-option
           *ngFor="let name of tableNames"
-          [selected]="name === defaultName"
           [value]="name"
         >
           {{name}}
-        </option>
-      </select>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </h2>
 
   <p>Hover over an element to populate the properties table on the left.</p>
