@@ -24,6 +24,7 @@ export class CreateTableComponent implements OnInit {
   public tableSizeForm: FormGroup;
   public properties: {[index: string]: string} = {};
   public defaultColor: string = "#007173";
+  public tableInProgress: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -35,6 +36,13 @@ export class CreateTableComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (this.tableInProgress) {
+      const choice = confirm("Are you sure you want to reset EVERYTHING on the current page?");
+      if (choice == false) {
+        return
+      }
+    }
+    this.tableInProgress = true;
     this.setTable();
     console.log(this.tableSizeForm);
   }

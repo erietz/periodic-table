@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Cell} from '../cell-base/cell-base.component';
 
@@ -29,8 +29,21 @@ export class CreateCellFormComponent implements OnInit {
       elementSymbol: this.cellInfo?.elementSymbol || "Test Symbol",
       elementName: this.cellInfo?.elementName || "Test Name",
       elementNumber: parseInt(this.cellInfo?.elementNumber) || 1,
-      elementProperties: {}
+      GroupBlock: "Default",
+      elementProperties: this.fb.array([this.fb.control('')])
     });
+  }
+
+  get elementProperties(): FormArray {
+    return this.cellForm.get('elementProperties') as FormArray;
+  }
+
+  addElementProperty(): void {
+    this.elementProperties.push(this.fb.control(''));
+  }
+
+  removeElementPropty(index: number): void {
+    this.elementProperties.removeAt(index);
   }
 
   saveCell(): void {

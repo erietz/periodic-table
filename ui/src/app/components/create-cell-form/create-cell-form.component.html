@@ -35,6 +35,29 @@
     </label>
     <br/>
 
+    <label>
+      GroupBlock (aka the color of the cell):
+      <input
+        type="text"
+        formControlName="GroupBlock"
+        placeholder="Default"
+        required
+      >
+    </label>
+    <br/>
+
+    <div
+      formArrayName="elementProperties"
+      *ngFor="let prop of elementProperties.controls; let i=index"
+    >
+      <label>
+        Element Property:
+        <input [formControlName]="i" type="text" placeholder="optional">
+        <button type="button" (click)="removeElementPropty(i)">Remove</button>
+      </label>
+    </div>
+    <button type="button" (click)="addElementProperty()">Add Property</button>
+
     <button type="submit" mat-button mat-dialog-close>
       Save Element
     </button>
