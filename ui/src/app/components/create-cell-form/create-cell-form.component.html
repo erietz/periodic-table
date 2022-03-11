@@ -1,4 +1,42 @@
 <div>
-  {{foo}}
-  <p>create-cell-form works!</p>
+
+  <form [formGroup]="cellForm" (ngSubmit)="saveCell()">
+    <label>
+      Atomic Name:
+      <input
+        type="text"
+        formControlName="elementName"
+        placeholder="cellInfo.elementName"
+        required
+      >
+    </label>
+    <br/>
+
+    <label>
+      Atomic Number:
+      <input
+        type="number"
+        formControlName="elementNumber"
+        min="1"
+        placeholder="1"
+        required
+      >
+    </label>
+    <br/>
+
+    <label>
+      Symbol:
+      <input
+        type="text"
+        formControlName="elementSymbol"
+        placeholder="H"
+        required
+      >
+    </label>
+    <br/>
+
+    <button type="submit" mat-button mat-dialog-close>
+      Save Element
+    </button>
+  </form>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../../components/popup/popup.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Row, Column } from "src/app/types/types";
@@ -18,7 +17,7 @@ import { CreateCellFormComponent } from 'src/app/components/create-cell-form/cre
 })
 export class CreateTableComponent implements OnInit {
 
-  public table: {[index: string]: any}[] = [];
+  public table: {[index: string]: Cell}[] = [];
   public columns: string[] = [];
   public groups: string[] = [];
   public palette: {[index: string]: string} = {};
@@ -27,7 +26,6 @@ export class CreateTableComponent implements OnInit {
   public defaultColor: string = "#007173";
 
   constructor(
-    private dialog: MatDialog,
     private fb: FormBuilder,
   ) {
     this.tableSizeForm = this.initTableSizeForm();
@@ -60,9 +58,9 @@ export class CreateTableComponent implements OnInit {
       const row: {[index: string]: Cell} = {};
       for (let column of this.columns) {
         row[column] = {
-          elementSymbol: "foo",
-          elementName: "bar",
-          elementNumber: "bar",
+          elementSymbol: "Symbol",
+          elementName: "Name",
+          elementNumber: "1",
           elementProperties: {},
         };
       }
@@ -70,11 +68,6 @@ export class CreateTableComponent implements OnInit {
     }
     this.table = table;
 
-  }
-
-  // used in the html to populates the properties table on the left
-  populateProperties(cell: Cell): void {
-    this.properties = cell.elementProperties;
   }
 
 }

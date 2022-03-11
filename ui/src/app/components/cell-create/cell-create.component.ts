@@ -19,8 +19,18 @@ export class CellCreateComponent extends CellBaseComponent implements OnInit {
   }
 
   public override openDialog(): void {
-      this.dialog.open(CreateCellFormComponent, { data: "test" });
-      console.log("clicked");
+    const dialogRef = this.dialog.open(
+      CreateCellFormComponent,
+      { data: this.cell }
+    );
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === null || result === undefined) {
+        return;
+      }
+      this.cell = result;
+    });
+
   }
 
 }
