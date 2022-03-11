@@ -30,7 +30,12 @@ export class CreateCellFormComponent implements OnInit {
       elementName: this.cellInfo?.elementName || "Test Name",
       elementNumber: parseInt(this.cellInfo?.elementNumber) || 1,
       GroupBlock: "Default",
-      elementProperties: this.fb.array([this.fb.control('')])
+      elementProperties: this.fb.array([
+        this.fb.group({
+          name: "",
+          description: "",
+        })
+      ])
     });
   }
 
@@ -39,10 +44,15 @@ export class CreateCellFormComponent implements OnInit {
   }
 
   addElementProperty(): void {
-    this.elementProperties.push(this.fb.control(''));
+    this.elementProperties.push(
+      this.fb.group({
+        name: "",
+        description: "",
+      })
+    );
   }
 
-  removeElementPropty(index: number): void {
+  removeElementProperty(index: number): void {
     this.elementProperties.removeAt(index);
   }
 

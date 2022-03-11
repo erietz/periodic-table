@@ -50,11 +50,18 @@
       formArrayName="elementProperties"
       *ngFor="let prop of elementProperties.controls; let i=index"
     >
+      <div [formGroupName]="i">
       <label>
         Element Property:
-        <input [formControlName]="i" type="text" placeholder="optional">
-        <button type="button" (click)="removeElementPropty(i)">Remove</button>
+
+          <input formControlName="name" placeholder="name">
+          <input formControlName="description" placeholder="description">
+
+        <button type="button" (click)="removeElementProperty(i)">Remove</button>
+
       </label>
+      </div>
+
     </div>
     <button type="button" (click)="addElementProperty()">Add Property</button>
 
