@@ -1,17 +1,20 @@
 <div class="content">
 
-  <form [formGroup]="tableSizeForm" (ngSubmit)="onSubmit()">
-    <h2>Table Size</h2>
-    <label>
-      Rows
-      <input type="number" formControlName="rows" required>
-    </label>
-    <label>
-      Columns
-      <input type="number" formControlName="columns" required>
-    </label>
+  <h2>Table Size</h2>
 
-    <button>Initialize table</button>
+  <form [formGroup]="tableSizeForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label> Rows </mat-label>
+        <input matInput type="number" min="1" formControlName="rows" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label> Columns </mat-label>
+        <input matInput type="number" min="1" formControlName="columns" required>
+    </mat-form-field>
+
+    <br/>
+    <button mat-raised-button color="primary">Initialize table</button>
   </form>
 
   <table>

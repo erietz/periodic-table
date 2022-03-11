@@ -1,72 +1,92 @@
-<div>
+<form [formGroup]="cellForm" (ngSubmit)="saveCell()">
 
-  <form [formGroup]="cellForm" (ngSubmit)="saveCell()">
-    <label>
-      Atomic Name:
+  <mat-form-field appearance="fill">
+    <mat-label> Atomic Name: </mat-label>
       <input
+        matInput
         type="text"
         formControlName="elementName"
-        placeholder="cellInfo.elementName"
         required
       >
-    </label>
-    <br/>
+  </mat-form-field>
 
-    <label>
-      Atomic Number:
+  <mat-form-field appearance="fill">
+    <mat-label> Atomic Number: </mat-label>
       <input
+        matInput
         type="number"
         formControlName="elementNumber"
         min="1"
-        placeholder="1"
         required
       >
-    </label>
-    <br/>
+  </mat-form-field>
 
-    <label>
-      Symbol:
+  <mat-form-field appearance="fill">
+    <mat-label> Symbol: </mat-label>
       <input
+        matInput
         type="text"
         formControlName="elementSymbol"
-        placeholder="H"
         required
       >
-    </label>
-    <br/>
+  </mat-form-field>
 
-    <label>
-      GroupBlock (aka the color of the cell):
+  <mat-form-field appearance="fill">
+    <mat-label> GroupBlock (aka the color): </mat-label>
       <input
+        matInput
         type="text"
         formControlName="GroupBlock"
-        placeholder="Default"
         required
       >
-    </label>
+  </mat-form-field>
+  <br/>
+
+
+  <span
+    formArrayName="elementProperties"
+    *ngFor="let prop of elementProperties.controls; let i=index"
+  >
+    <mat-form-field [formGroupName]="i" appearance="fill">
+      <mat-label> Name: </mat-label>
+      <input matInput formControlName="name" placeholder="name" required>
+
+      <mat-label> Description: </mat-label>
+      <input matInput formControlName="description" placeholder="description" required>
+
+      <button
+        mat-raised-button
+        color="accent"
+        type="button"
+        (click)="removeElementProperty(i)"
+      >
+        Remove
+      </button>
+
+    </mat-form-field>
+  </span>
+
+  <div class="centered">
+    <button
+      mat-raised-button
+      color="accent"
+      type="button"
+      (click)="addElementProperty()"
+    >
+      Add Element Property
+    </button>
+
     <br/>
 
-    <div
-      formArrayName="elementProperties"
-      *ngFor="let prop of elementProperties.controls; let i=index"
+    <button
+      type="submit"
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      [disabled]="!formInvalid()"
     >
-      <div [formGroupName]="i">
-      <label>
-        Element Property:
-
-          <input formControlName="name" placeholder="name">
-          <input formControlName="description" placeholder="description">
-
-        <button type="button" (click)="removeElementProperty(i)">Remove</button>
-
-      </label>
-      </div>
-
-    </div>
-    <button type="button" (click)="addElementProperty()">Add Property</button>
-
-    <button type="submit" mat-button mat-dialog-close>
-      Save Element
+      Save
     </button>
-  </form>
-</div>
+  </div>
+</form>
+
