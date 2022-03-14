@@ -1,8 +1,14 @@
 <div class="content">
 
-  <h2>Table Size</h2>
+  <h2>Create A New Periodic Table</h2>
 
   <form [formGroup]="tableSizeForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="outline">
+      <mat-label> Table Name </mat-label>
+        <input matInput type="text" formControlName="name" required>
+    </mat-form-field>
+
     <mat-form-field appearance="outline">
       <mat-label> Rows </mat-label>
         <input matInput type="number" min="1" formControlName="rows" required>
@@ -24,11 +30,20 @@
           <app-cell-create
             [cell]="row[col]"
             [backgroundColor]="palette[row[col].elementProperties['GroupBlock']]"
-            (groupBlock)="setDefaultColor($event)"
+            (groupBlock)="onGroupBlockUpdate($event)"
             >
           </app-cell-create>
         </td>
     </tbody>
   </table>
+
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="this.columns.length > 0"
+    (click)="saveToDb()"
+  >
+    Save Table To Database
+  </button>
 
 </div>

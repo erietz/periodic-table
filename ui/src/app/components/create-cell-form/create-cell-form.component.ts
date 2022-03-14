@@ -31,8 +31,12 @@ export class CreateCellFormComponent implements OnInit {
       elementSymbol: this.cellInfo?.elementSymbol || "Test Symbol",
       elementName: this.cellInfo?.elementName || "Test Name",
       elementNumber: parseInt(this.cellInfo?.elementNumber) || 1,
-      GroupBlock: "Default",
-      elementProperties: this.fb.array([])
+      elementProperties: this.fb.array([
+        this.fb.group({
+          name: "GroupBlock",
+          description: this.cellInfo?.elementProperties["GroupBlock"] || "Default",
+        })
+      ])
     });
   }
 

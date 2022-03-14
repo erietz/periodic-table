@@ -1,8 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import {CellBaseComponent} from '../cell-base/cell-base.component';
 import { PopupComponent } from '../popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateCellFormComponent } from '../create-cell-form/create-cell-form.component';
+import { Cell } from "../cell-base/cell-base.component";
 
 @Component({
   selector: 'app-cell-create',
@@ -29,10 +30,26 @@ export class CellCreateComponent extends CellBaseComponent implements OnInit {
       if (result === null || result === undefined) {
         return;
       }
-      this.cell = result;
-      this.groupBlock.emit(result["GroupBlock"]);
+      this.cell = this.coerceFormResults(result);
+      console.log("coerced data", this.cell);
+      this.groupBlock.emit(this.cell["elementProperties"]["GroupBlock"]);
     });
 
+  }
+
+  coerceFormResults(result: any): Cell {
+    let tmp: Cell = {
+      elementName : result.elementName,
+      elementSymbol : result.elementSymbol,
+      elementNumber : result.elementNumber,
+      elementProperties : {}
+    };
+
+    for (const prop of result.elementProperties) {
+      tmp.elementProperties[prop.name] = prop.description;
+    }
+
+    return tmp;
   }
 
 }

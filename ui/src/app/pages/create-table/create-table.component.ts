@@ -36,20 +36,29 @@ export class CreateTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.tableInProgress) {
       const choice = confirm("Are you sure you want to reset EVERYTHING on the current page?");
       if (choice == false) {
         return
       }
     }
+
+    const resonse = await fetch("/api/tablenames");
+    const existingNames: string[] = await resonse.json();
+    if (existingNames.includes(this.tableSizeForm.value.name)) {
+      alert("table name already exists... try another name");
+      return;
+    }
+
     this.tableInProgress = true;
     this.setTable();
-    console.log(this.tableSizeForm);
+    // console.log(this.tableSizeForm);
   }
 
   initTableSizeForm(): FormGroup {
     return this.fb.group({
+      name: "Table Name",
       rows: 0,
       columns: 0,
     });
@@ -93,10 +102,59 @@ export class CreateTableComponent implements OnInit {
     return palette;
   }
 
-  setDefaultColor(groupBlock: any): void {
-    console.log("setDefaultColor has been called", groupBlock);
+  onGroupBlockUpdate(groupBlock: any): void {
+    console.log("onGroupBlockUpdate has been called", groupBlock);
     this.groups.add(groupBlock);
     this.palette = this.generateColorPalette();
     console.log("this.palette", this.palette);
+
+    // for (const row of this.table) {
+    //   for (const col in this.columns) {
+    //     if (row[col]["elementProperties"]["GroupBlock"] === groupBlock) {
+    //       row[col]["elementProperties"]["GroupBlock"]
+    //     }
+    //   }
+    // }
+
   }
+
+  async saveToDb(): Promise<void> {
+    const tmpTable: {[index: string]: Cell}[] = [];
+
+    for (const row of this.table) {
+      const tmpRow: any = {};
+      for (const col of this.columns) {
+        const tmpCol: any = {}
+        tmpCol["Name"] = row[col]["elementName"];
+        tmpCol["AtomicNumber"] = row[col]["elementNumber"];
+        tmpCol["Symbol"] = row[col]["elementSymbol"];
+        for (const prop in row[col].elementProperties) {
+          tmpCol[prop] = row[col].elementProperties[prop]
+        }
+
+        tmpRow[col] = tmpCol;
+      }
+      tmpTable.push(tmpRow);
+    }
+
+
+    const data: any = {};
+    data["name"] = this.tableSizeForm.value.name;
+    data["date"] = new Date();
+    data["data"] = tmpTable;
+
+    console.log(data);
+
+    const response = await fetch("/api/savetable", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    alert(`status: ${response.status}, body: ${JSON.stringify(await response.json())}`);
+
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,14 @@ export class HomeComponent implements OnInit {
   public tableNames: string[] = [];
   public tableName: string = "Elements";
   public defaultName: string = "Elements";
+  public tableForm: FormGroup;
 
-  constructor() {
+  constructor(
+    private fb: FormBuilder,
+  ) {
+    this.tableForm = this.fb.group({
+      name: this.defaultName
+    });
   }
 
   ngOnInit(): void {
