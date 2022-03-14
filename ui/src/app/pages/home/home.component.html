@@ -4,7 +4,7 @@
 
     <form [formGroup]="tableForm">
       <mat-form-field appearance="fill">
-        <mat-select (change)="onSelectorChange($event)" placeholder="{{defaultName}}">
+        <mat-select (selectionChange)="onSelectorChange($event)" placeholder="{{defaultName}}">
           <mat-option
             *ngFor="let name of tableNames"
             [value]="name"
