@@ -1,11 +1,11 @@
 <div
   class="cell"
   [style.background]="backgroundColor"
-  *ngIf="cell.elementNumber"
   (mouseover)="onHover()"
+  *ngIf="cell.value?.elementNumber"
   (click)="openDialog()"
   >
-  <b>{{cell.elementSymbol}}</b>
-  <p> {{cell.elementName}} </p>
-  <p> {{cell.elementNumber}} </p>
+  <b>{{cell.value?.elementSymbol}}</b>
+  <p> {{cell.value?.elementName}} </p>
+  <p> {{cell.value?.elementNumber}} </p>
 </div>

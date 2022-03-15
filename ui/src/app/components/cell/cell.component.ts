@@ -16,7 +16,7 @@ export class CellComponent extends CellBaseComponent {
   }
 
   override onHover() {
-    this.displayProperties.emit(this.cell);
+    this.displayProperties.emit(this.cell.value);
   }
 
   override openDialog() {
@@ -25,13 +25,13 @@ export class CellComponent extends CellBaseComponent {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ name: this.cell.elementName})
+      body: JSON.stringify({ name: this.cell.value.elementName})
     })
       .then(data => data.json())
       .then(json => {
-        const data: CellWithDescription = {
+        const data: any = {
           ...this.cell,
-          elementDescription: json[this.cell.elementName],
+          elementDescription: json[this.cell.value.elementName],
         }
         this.dialog.open(PopupComponent, { data: data });
       })

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
+import { Observable, BehaviorSubject, of } from "rxjs";
 
 export interface Cell {
   elementSymbol: string;
@@ -17,17 +18,17 @@ export interface CellWithDescription extends Cell {
   styleUrls: ['./cell-base.component.scss']
 })
 export class CellBaseComponent {
-  @Input() cell: Cell;
+  @Input() cell: BehaviorSubject<Cell>;
   @Input() backgroundColor: string;
 
   constructor(
   ) {
-    this.cell = {
+    this.cell = new BehaviorSubject<Cell>({
       'elementSymbol': 'elementSymbol',
       'elementName': 'elementName',
       "elementNumber": "elementNumber",
       "elementProperties": {},
-    };
+    });
     this.backgroundColor = "#007173";
   }
 

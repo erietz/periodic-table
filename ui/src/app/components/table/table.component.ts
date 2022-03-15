@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { Cell } from '../cell-base/cell-base.component';
 import { COLOR_PALETTE } from 'src/assets/color_palette';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-table',
@@ -8,11 +9,12 @@ import { COLOR_PALETTE } from 'src/assets/color_palette';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit, OnChanges {
-  public table: {[index: string]: any}[] = [];
+  public table: {[index: string]: BehaviorSubject<Cell>}[] = [];
   public columns: string[] = [];
   public groups: Set<string> = new Set<string>();
   public palette: {[index: string]: string} = {};
   public properties: {[index: string]: string} = {};
+  public foo: string = "#3e3e3e";
 
   @Input() inputTable: any = [];
 
@@ -32,26 +34,26 @@ export class TableComponent implements OnInit, OnChanges {
     [this.table, this.groups] = this.parseData(json[0]["data"]);
     this.columns = Object.keys(this.table[0]);
     this.palette = this.generateColorPalette();
-    this.properties = this.table[0][this.columns[0]]["elementProperties"];
+    // this.properties = this.table[0][this.columns[0]]["elementProperties"];
   }
 
 
-  parseData(foo: any): [{[index: string]: Cell}[], Set<string>] {
-    let data: {[index: string]: Cell}[] = [];
+  parseData(foo: any): [{[index: string]: BehaviorSubject<Cell>}[], Set<string>] {
+    let data: {[index: string]: BehaviorSubject<Cell>}[] = [];
     let groups = new Set<string>();
 
     for (const row of foo) {
-      let newRow: {[index: string]: Cell} = {};
+      let newRow: {[index: string]: BehaviorSubject<Cell>} = {};
       for (const col in row) {
 
         const d = row[col];
 
-        newRow[col] = {
+        newRow[col] = new BehaviorSubject<Cell>({
           elementSymbol: d['Symbol'],
           elementName: d['Name'],
           elementNumber: d['AtomicNumber'],
           elementProperties: d
-        }
+        });
 
         if (d['GroupBlock'] != null && !groups.has(d['GroupBlock'])) {
           groups.add(d['GroupBlock']);

@@ -29,7 +29,7 @@
         <td *ngFor="let col of columns">
           <app-cell-create
             [cell]="row[col]"
-            [backgroundColor]="palette[row[col].elementProperties['GroupBlock']]"
+            [backgroundColor]="palette[row[col].value.elementProperties['GroupBlock']]"
             (groupBlock)="onGroupBlockUpdate($event)"
             >
           </app-cell-create>

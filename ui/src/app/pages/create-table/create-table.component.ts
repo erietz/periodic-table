@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PopupComponent } from '../../components/popup/popup.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Row, Column } from "src/app/types/types";
 import { Cell } from "src/app/components/cell-base/cell-base.component";
-import { CellCreateComponent } from 'src/app/components/cell-create/cell-create.component';
-import { CreateCellFormComponent } from 'src/app/components/create-cell-form/create-cell-form.component';
 import { COLOR_PALETTE } from 'src/assets/color_palette';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+
 
 // TODO: A huge portion of this class and the other table class
 // are the exact same. I need to create a common base class that
@@ -18,7 +16,7 @@ import { COLOR_PALETTE } from 'src/assets/color_palette';
 })
 export class CreateTableComponent implements OnInit {
 
-  public table: {[index: string]: Cell}[] = [];
+  public table: {[index: string]: BehaviorSubject<Cell>}[] = [];
   public columns: string[] = [];
   public groups: Set<string> = new Set<string>(["Default"]);
   public palette: {[index: string]: string} = {
@@ -73,16 +71,16 @@ export class CreateTableComponent implements OnInit {
 
     const table = [];
     for (let i=0; i<this.tableSizeForm.value.rows; i++) {
-      const row: {[index: string]: Cell} = {};
+      let row: {[index: string]: BehaviorSubject<Cell>} = {};
       for (let column of this.columns) {
-        row[column] = {
+        row[column].next({
           elementSymbol: "Symbol",
           elementName: "Name",
           elementNumber: "1",
           elementProperties: {
             GroupBlock: "Default",
           },
-        };
+        });
       }
       table.push(row);
     }
@@ -119,41 +117,43 @@ export class CreateTableComponent implements OnInit {
   }
 
   async saveToDb(): Promise<void> {
-    const tmpTable: {[index: string]: Cell}[] = [];
+    // const tmpTable: {[index: string]: Cell}[] = [];
 
-    for (const row of this.table) {
-      const tmpRow: any = {};
-      for (const col of this.columns) {
-        const tmpCol: any = {}
-        tmpCol["Name"] = row[col]["elementName"];
-        tmpCol["AtomicNumber"] = row[col]["elementNumber"];
-        tmpCol["Symbol"] = row[col]["elementSymbol"];
-        for (const prop in row[col].elementProperties) {
-          tmpCol[prop] = row[col].elementProperties[prop]
-        }
+    // this.table.subscribe(rows => {
+    //   for (const row of rows) {
+    //     const tmpRow: any = {};
+    //     for (const col of this.columns) {
+    //       const tmpCol: any = {}
+    //       tmpCol["Name"] = row[col]["elementName"];
+    //       tmpCol["AtomicNumber"] = row[col]["elementNumber"];
+    //       tmpCol["Symbol"] = row[col]["elementSymbol"];
+    //       for (const prop in row[col].elementProperties) {
+    //         tmpCol[prop] = row[col].elementProperties[prop]
+    //       }
 
-        tmpRow[col] = tmpCol;
-      }
-      tmpTable.push(tmpRow);
-    }
+    //       tmpRow[col] = tmpCol;
+    //     }
+    //     tmpTable.push(tmpRow);
+    //   }
+    // });
 
 
-    const data: any = {};
-    data["name"] = this.tableSizeForm.value.name;
-    data["date"] = new Date();
-    data["data"] = tmpTable;
+    // const data: any = {};
+    // data["name"] = this.tableSizeForm.value.name;
+    // data["date"] = new Date();
+    // data["data"] = tmpTable;
 
-    console.log(data);
+    // console.log(data);
 
-    const response = await fetch("/api/savetable", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
+    // const response = await fetch("/api/savetable", {
+    //   method: "POST",
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // });
 
-    alert(`status: ${response.status}, body: ${JSON.stringify(await response.json())}`);
+    // alert(`status: ${response.status}, body: ${JSON.stringify(await response.json())}`);
 
   }
 

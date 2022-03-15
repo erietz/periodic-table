@@ -30,9 +30,9 @@ export class CellCreateComponent extends CellBaseComponent implements OnInit {
       if (result === null || result === undefined) {
         return;
       }
-      this.cell = this.coerceFormResults(result);
+      this.cell.next(this.coerceFormResults(result));
       console.log("coerced data", this.cell);
-      this.groupBlock.emit(this.cell["elementProperties"]["GroupBlock"]);
+      this.groupBlock.emit(this.cell.value["elementProperties"]["GroupBlock"]);
     });
 
   }
