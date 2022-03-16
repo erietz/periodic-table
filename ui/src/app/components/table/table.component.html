@@ -10,7 +10,7 @@
         <td *ngFor="let col of columns">
           <app-cell
             [cell]="row[col]"
-            [backgroundColor]="foo"
+            [backgroundColor]="palette[row[col].value.elementProperties['GroupBlock']]"
             (displayProperties)="populateProperties($event)"
             >
           </app-cell>

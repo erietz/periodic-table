@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Cell} from '../cell-base/cell-base.component';
 import { ChangeDetectionStrategy } from "@angular/core";  // import
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -11,11 +12,11 @@ import { ChangeDetectionStrategy } from "@angular/core";  // import
   styleUrls: ['./create-cell-form.component.scss'],
 })
 export class CreateCellFormComponent implements OnInit {
-  public cellInfo: Cell;
+  public cellInfo: BehaviorSubject<Cell>;
   public cellForm: FormGroup;
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: Cell,
+    @Inject(MAT_DIALOG_DATA) public data: BehaviorSubject<Cell>,
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<CreateCellFormComponent>
   ) {
@@ -28,13 +29,13 @@ export class CreateCellFormComponent implements OnInit {
 
   initCellForm(): FormGroup {
     return this.fb.group({
-      elementSymbol: this.cellInfo?.elementSymbol || "Test Symbol",
-      elementName: this.cellInfo?.elementName || "Test Name",
-      elementNumber: parseInt(this.cellInfo?.elementNumber) || 1,
+      elementSymbol: this.cellInfo?.value.elementSymbol || "Test Symbol",
+      elementName: this.cellInfo?.value.elementName || "Test Name",
+      elementNumber: parseInt(this.cellInfo?.value.elementNumber) || 1,
       elementProperties: this.fb.array([
         this.fb.group({
           name: "GroupBlock",
-          description: this.cellInfo?.elementProperties["GroupBlock"] || "Default",
+          description: this.cellInfo?.value.elementProperties["GroupBlock"] || "Default",
         })
       ])
     });
