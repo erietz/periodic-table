@@ -14,7 +14,6 @@ export class TableComponent implements OnInit, OnChanges {
   public groups: Set<string> = new Set<string>();
   public palette: {[index: string]: string} = {};
   public properties: {[index: string]: string} = {};
-  public foo: string = "#3e3e3e";
 
   @Input() inputTable: any = [];
 
@@ -34,7 +33,7 @@ export class TableComponent implements OnInit, OnChanges {
     [this.table, this.groups] = this.parseData(json[0]["data"]);
     this.columns = Object.keys(this.table[0]);
     this.palette = this.generateColorPalette();
-    // this.properties = this.table[0][this.columns[0]]["elementProperties"];
+    this.properties = this.table[0][this.columns[0]].value["elementProperties"];
   }
 
 
