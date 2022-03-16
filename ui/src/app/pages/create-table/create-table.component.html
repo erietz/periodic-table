@@ -2,7 +2,40 @@
 
   <h2>Create A New Periodic Table</h2>
 
-  <form [formGroup]="tableSizeForm" (ngSubmit)="initCells()">
+  <form [formGroup]="creationStyleForm" *ngIf="creationStyle === 0">
+    <h2>Creation Style</h2>
+    <mat-form-field>
+      <mat-label>Creation Style</mat-label>
+      <mat-select [(value)]="creationStyle">
+        <mat-option [value]="1">From Scratch</mat-option>
+        <mat-option [value]="2">From Clone</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+
+  <form [formGroup]="cloneForm" *ngIf="creationStyle === 2" (ngSubmit)="initCells()">
+    <h2>From Clone</h2>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Table To Clone From</mat-label>
+      <mat-select [(value)]="cloneTableName">
+        <mat-option *ngFor="let name of tableNames" [value]="name">
+          {{name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>New Table Name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <br/>
+    <button mat-raised-button type="submit">Initialize Table</button>
+  </form>
+
+  <form [formGroup]="tableSizeForm" (ngSubmit)="initCells()" *ngIf="creationStyle === 1">
+    <h2>From Scratch</h2>
 
     <mat-form-field appearance="outline">
       <mat-label> Table Name </mat-label>
@@ -23,19 +56,21 @@
     <button mat-raised-button color="primary">Initialize table</button>
   </form>
 
-  <table>
-    <tbody>
-      <tr *ngFor="let row of table">
-        <td *ngFor="let col of columns">
-          <app-cell-create
-            [cell]="row[col]"
-            [backgroundColor]="palette[row[col].value.elementProperties['GroupBlock']]"
-            (groupBlock)="onGroupBlockUpdate($event)"
-            >
-          </app-cell-create>
-        </td>
-    </tbody>
-  </table>
+  <div id="middle">
+    <table>
+      <tbody>
+        <tr *ngFor="let row of table">
+          <td *ngFor="let col of columns">
+            <app-cell-create
+              [cell]="row[col]"
+              [backgroundColor]="palette[row[col].value.elementProperties['GroupBlock']]"
+              (groupBlock)="onGroupBlockUpdate($event)"
+              >
+            </app-cell-create>
+          </td>
+      </tbody>
+    </table>
+  </div>
 
   <button
     mat-raised-button
