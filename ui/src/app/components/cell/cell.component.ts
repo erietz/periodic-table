@@ -30,7 +30,7 @@ export class CellComponent extends CellBaseComponent {
       .then(data => data.json())
       .then(json => {
         const data: any = {
-          ...this.cell,
+          ...this.cell.value,
           elementDescription: json[this.cell.value.elementName],
         }
         this.dialog.open(PopupComponent, { data: data });

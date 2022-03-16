@@ -24,3 +24,12 @@ body {
 a {
   color: var(--color-complementary);
 }
+
+.mat-form-field {
+  padding: 10px;
+}
+
+// this might not be doing anything
+.mat-input-element {
+  padding: 10px;
+}

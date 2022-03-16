@@ -36,10 +36,10 @@ app.get("/api/tablenames", (_, res) => {
 
 app.post("/api/savetable", async (req, res) => {
     saveTable(req.body)
-        .then(json => res.send(json))
+        .then(json => res.status(200).send(json))
         .catch(err => {
             console.error(err)
-            res.send(err)
+            res.status(400).send(err)
         });
 });
 

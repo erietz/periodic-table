@@ -19,19 +19,19 @@
     <mat-form-field appearance="fill">
       <mat-label>Table To Clone From</mat-label>
       <mat-select [(value)]="cloneTableName">
-        <mat-option *ngFor="let name of tableNames" [value]="name">
-          {{name}}
+        <mat-option *ngFor="let foo of tableNames" [value]="foo">
+          {{foo}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>New Table Name</mat-label>
       <input matInput formControlName="name">
     </mat-form-field>
 
     <br/>
-    <button mat-raised-button type="submit">Initialize Table</button>
+    <button mat-raised-button color="primary" type="submit" *ngIf="cloneTableName != null">Initialize Table</button>
   </form>
 
   <form [formGroup]="tableSizeForm" (ngSubmit)="initCells()" *ngIf="creationStyle === 1">

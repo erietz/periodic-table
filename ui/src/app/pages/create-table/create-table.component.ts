@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Cell } from "src/app/components/cell-base/cell-base.component";
 import { COLOR_PALETTE } from 'src/assets/color_palette';
 import { Observable, BehaviorSubject, of } from 'rxjs';
+import { Router } from "@angular/router";
 
 enum CreationStyle {
   Unset = 0,
@@ -36,6 +37,7 @@ export class CreateTableComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) {
     this.creationStyleForm = this.initCreationStyleForm();
     this.cloneForm = this.initCloneForm();
@@ -137,9 +139,6 @@ export class CreateTableComponent implements OnInit {
     }
     this.table = table;
     this.palette = this.generateColorPalette();
-    console.log(this.table);
-    console.log(this.palette);
-    console.log(this.groups);
   }
 
   setTableFromScratch(): void {
@@ -208,11 +207,10 @@ export class CreateTableComponent implements OnInit {
 
 
     const data: any = {};
-    data["name"] = this.tableSizeForm.value.name;
+    data["name"] = this.creationStyle === CreationStyle.FromClone
+      ? this.cloneForm.value.name : this.tableSizeForm.value.name;
     data["date"] = new Date();
     data["data"] = tmpTable;
-
-    console.log(data);
 
     const response = await fetch("/api/savetable", {
       method: "POST",
@@ -222,7 +220,15 @@ export class CreateTableComponent implements OnInit {
       body: JSON.stringify(data)
     });
 
-    alert(`status: ${response.status}, body: ${JSON.stringify(await response.json())}`);
+    const responseJson = await response.json();
+    console.log(responseJson);
+    if (response.status === 200) {
+      alert("Table successfully saved");
+      this.router.navigate(["home"]);
+    } else {
+      alert("Error: There is a problem with the data. Table not saved to the database. Please check the developer console for detauls." + JSON.stringify(response));
+      console.table(responseJson["data"]);
+    }
 
   }
 
