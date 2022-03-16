@@ -34,7 +34,7 @@ export class CreateTableComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  async onSubmit(): Promise<void> {
+  async initCells(): Promise<void> {
     if (this.tableInProgress) {
       const choice = confirm("Are you sure you want to reset EVERYTHING on the current page?");
       if (choice == false) {
@@ -42,8 +42,8 @@ export class CreateTableComponent implements OnInit {
       }
     }
 
-    const resonse = await fetch("/api/tablenames");
-    const existingNames: string[] = await resonse.json();
+    const response = await fetch("/api/tablenames");
+    const existingNames: string[] = await response.json();
     if (existingNames.includes(this.tableSizeForm.value.name)) {
       alert("table name already exists... try another name");
       return;
@@ -51,7 +51,6 @@ export class CreateTableComponent implements OnInit {
 
     this.tableInProgress = true;
     this.setTable();
-    // console.log(this.tableSizeForm);
   }
 
   initTableSizeForm(): FormGroup {
@@ -105,15 +104,6 @@ export class CreateTableComponent implements OnInit {
     this.groups.add(groupBlock);
     this.palette = this.generateColorPalette();
     console.log("this.palette", this.palette);
-
-    // for (const row of this.table) {
-    //   for (const col in this.columns) {
-    //     if (row[col]["elementProperties"]["GroupBlock"] === groupBlock) {
-    //       row[col]["elementProperties"]["GroupBlock"]
-    //     }
-    //   }
-    // }
-
   }
 
   async saveToDb(): Promise<void> {

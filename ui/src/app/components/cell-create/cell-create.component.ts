@@ -49,6 +49,10 @@ export class CellCreateComponent extends CellBaseComponent implements OnInit {
       tmp.elementProperties[prop.name] = prop.description;
     }
 
+    if (tmp.elementProperties["GroupBlock"] == null) {
+      tmp.elementProperties["GroupBlock"] = "Default";
+    }
+
     return tmp;
   }
 

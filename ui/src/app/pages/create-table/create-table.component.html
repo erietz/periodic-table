@@ -2,7 +2,7 @@
 
   <h2>Create A New Periodic Table</h2>
 
-  <form [formGroup]="tableSizeForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="tableSizeForm" (ngSubmit)="initCells()">
 
     <mat-form-field appearance="outline">
       <mat-label> Table Name </mat-label>
