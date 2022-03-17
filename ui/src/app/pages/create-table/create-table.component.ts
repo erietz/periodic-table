@@ -11,10 +11,6 @@ enum CreationStyle {
   FromClone = 2,
 }
 
-// TODO: A huge portion of this class and the other table class
-// are the exact same. I need to create a common base class that
-// both inherit from.
-
 @Component({
   selector: 'app-create-table',
   templateUrl: './create-table.component.html',

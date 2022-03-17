@@ -26,7 +26,6 @@ export class DeleteTableComponent implements OnInit {
 
   onSelectorChange(event: any) {
     console.log(event.source.value);
-    // const element = event.currentTarget as HTMLInputElement
     const element = event.source;
     const value = element.value
     this.tableName = value;
