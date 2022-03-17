@@ -25,8 +25,6 @@ export class HomeComponent implements OnInit {
   }
 
   onSelectorChange(event: any) {
-    // console.log(event.source);
-    // const element = event.currentTarget as HTMLInputElement
     const element = event.source;
     const value = element.value
     this.tableName = value;
